@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 15:46:25 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 12:30:34 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/04 16:55:44 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- ** Copies n bytes from src to dst. If dst and src overlap,
- ** behavior is undefined.
- */
-
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*dst8;
-	char	*src8;
+	char	*s2;
+	void	*p;
+	size_t	i;
 
-	dst8 = (char *)dst;
-	src8 = (char *)src;
-	while (n--)
-		*dst8++ = *src8++;
-	return(dst);
+	s2 = (char *)s;
+	i = 0;
+	p = NULL;
+	while (i < n)
+	{
+		if ((unsigned char)(s2[i]) == (unsigned char)c)
+		{
+			p = &c;
+			return (p);
+		}
+		i++;
+	}
+	return (p);
 }

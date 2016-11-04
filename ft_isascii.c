@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 15:46:25 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 14:28:38 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/04 14:30:20 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- ** Copies n bytes from src to dst. If dst and src overlap,
- ** behavior is undefined.
- */
+** Tests for an ASCII character. Returns 1 if true, 0 is false. 
+*/
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_isascii(int c)
 {
-	char	*dst8;
-	char	*src8;
-
-	dst8 = (char *)dst;
-	src8 = (char *)src;
-	while (n--)
-		*dst8++ = *src8++;
-	return(dst);
+	if (0 <= c && c <= 177)
+		return (1);
+	return (0);
 }

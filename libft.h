@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/03 17:45:22 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/04 16:01:03 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ char			*ft_strcat(char *s1, char *s2);
 char			*ft_strncat(char *s1, char *s2, int nb);
 unsigned int	ft_strlcat(char *dst, char *src, unsigned int size);
 int				ft_isalpha(int c);
+int				ft_isdigit(int c);
+int				ft_isalnum(int c);
+int				ft_isascii(int c);
+int				ft_isprint(int c);
+int				ft_toupper(int c);
+int				ft_tolower(int c);
 
 
 #endif

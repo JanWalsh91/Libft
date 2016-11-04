@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 15:46:25 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 14:15:19 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/04 14:16:15 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- ** Copies n bytes from src to dst. If dst and src overlap,
- ** behavior is undefined.
- */
-
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_atoi(const char *str)
 {
-	char	*dst8;
-	char	*src8;
+	unsigned int	i;
+	long			result;
+	int				sign;
 
-	dst8 = (char *)dst;
-	src8 = (char *)src;
-	while (n--)
-		*dst8++ = *src8++;
-	return(dst);
+	i = 0;
+	result = 0;
+	sign = 1;
+
+	while (str[i] < 33)
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+		if (str[i] == '-')
+			sign = -1;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + str[i] - '0';
+		i++;
+	}
+	return ((int)(sign * result));
 }

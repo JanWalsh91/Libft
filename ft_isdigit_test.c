@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 15:46:25 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 14:22:59 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/04 14:24:55 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- ** Copies n bytes from src to dst. If dst and src overlap,
- ** behavior is undefined.
- */
+#include <stdio.h>
+#include <ctype.h>
 
-#include "libft.h"
+int	ft_isdigit(int c);
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	main(void)
 {
-	char	*dst8;
-	char	*src8;
+	char c;
 
-	dst8 = (char *)dst;
-	src8 = (char *)src;
-	while (n--)
-		*dst8++ = *src8++;
-	return(dst);
+	c = 'A';
+	printf("char: %c isdigit: %d\n", c, isdigit(c));
+	printf("char: %c ft_isdigit: %d\n", c, ft_isdigit(c));
+	return (0);
 }

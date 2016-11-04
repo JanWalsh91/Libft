@@ -6,13 +6,17 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:41:22 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/03 17:45:24 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/04 14:22:18 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+/*
+** Returns 1 if char is alpha, 0 if not. 
+*/
 
-int ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
 	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
 		return (1);

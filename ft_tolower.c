@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 15:46:25 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 14:53:56 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/04 14:54:41 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- ** Copies n bytes from src to dst. If dst and src overlap,
- ** behavior is undefined.
- */
+** Convert a upper-case letter to the corresponding lower-case letter.
+** Otherwise, the argument is returned unchanged.
+*/
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_tolower(int c)
 {
-	char	*dst8;
-	char	*src8;
-
-	dst8 = (char *)dst;
-	src8 = (char *)src;
-	while (n--)
-		*dst8++ = *src8++;
-	return(dst);
+	if (65 <= c && c <= 90)
+		c = c - 32;
+	return (c);
 }

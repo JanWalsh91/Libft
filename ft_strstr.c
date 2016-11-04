@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 15:46:25 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 12:56:38 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/04 13:01:43 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- ** Copies n bytes from src to dst. If dst and src overlap,
- ** behavior is undefined.
- */
-
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strstr(const char *str, const char *to_find)
 {
-	char	*dst8;
-	char	*src8;
+	int	i;
+	int	j;
+	int	to_find_length;
 
-	dst8 = (char *)dst;
-	src8 = (char *)src;
-	while (n--)
-		*dst8++ = *src8++;
-	return(dst);
+	i = 0;
+	to_find_length = 0;
+	while (to_find[to_find_length])
+		to_find_length++;
+	while (str[i++])
+	{
+		if (str[i] == to_find[0])
+		{
+			j = 0;
+			while (str[i + j] && str[i + j] == to_find[j] && to_find[j])
+			{
+				j++;
+			}
+			if (j == to_find_length)
+				return ((char *)&str[i]);
+		}
+	}
+	return (0);
 }

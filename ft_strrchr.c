@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:18:58 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 11:33:30 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 12:35:54 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/04 12:46:59 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Writes n \0 to the string s.
-** If n is 0, ft_bzero does nothing.
+** Locates the last occurrence of c (converted to char) in the string pointed
+** to by s. The terminating null character is considered to be part of the
+** string; therefore if c is \0, the functions locate the \0.
+** Returns a pointer to the located character or NULL.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned long	i;
+	int		i;
+	char	*p;
 
-	if (n == 0)
-		return ;
 	i = 0;
-	while (i < n)
+	p = NULL;
+	while (i < ft_strlen((char*)s) + 1)
 	{
-		((char*)s)[i] = '\0';
+		if (s[i] == (char)c)
+			p = &((char*)s)[i];
 		i++;
 	}
+	return (p);
 }
