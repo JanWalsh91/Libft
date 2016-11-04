@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 18:11:42 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 18:02:15 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/04 18:04:54 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- ** Copies n bytes from src to dst. If dst and src overlap,
- ** behavior is undefined.
- */
+** Applies the function f to each character in the string s to create a new 
+** string with the resturn values of f. f takes the index of the char as well.
+** Returns the new string.
+*/
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*dst8;
-	char	*src8;
+	char			*str;
+	char			*s2;
+	unsigned int	i;
 
-	dst8 = (char *)dst;
-	src8 = (char *)src;
-	while (n--)
-		*dst8++ = *src8++;
-	return(dst);
+	s2 = (char *)s;
+	i = 0;
+	str = ft_strnew(ft_strlen(s2) + 1);
+	while (s2[i])
+	{
+		str[i] = (*f)(i, s2[i]);
+		i++;
+	}
+	return (str);
 }

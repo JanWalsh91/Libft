@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 15:21:00 by jwalsh            #+#    #+#              #
-#    Updated: 2016/11/04 11:26:58 by jwalsh           ###   ########.fr        #
+#    Updated: 2016/11/04 18:01:10 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,15 @@ SRC = ft_memset.c \
 	  ft_isascii.c \
 	  ft_isprint.c \
 	  ft_toupper.c \
-	  ft_tolower.c
+	  ft_tolower.c \
+	  ft_memalloc.c \
+	  ft_memdel.c \
+	  ft_strnew.c \
+	  ft_strdel.c \
+	  ft_strclr.c \
+	  ft_striter.c \
+	  ft_striteri.c \
+	  ft_strmap.c
 
 BIN = ft_memset.o \
 	  ft_bzero.o \
@@ -70,7 +78,15 @@ BIN = ft_memset.o \
 	  ft_isascii.o \
 	  ft_isprint.o \
 	  ft_toupper.o \
-	  ft_tolower.o
+	  ft_tolower.o \
+	  ft_memalloc.o \
+	  ft_memdel.o \
+	  ft_strnew.o \
+	  ft_strdel.o \
+	  ft_strclr.o \
+	  ft_striter.o \
+	  ft_striteri.o \
+	  ft_strmap.o
 
 HEAD = includes/*.h
 

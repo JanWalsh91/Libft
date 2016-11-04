@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 18:11:42 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 17:18:09 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/04 18:17:48 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- ** Copies n bytes from src to dst. If dst and src overlap,
- ** behavior is undefined.
- */
+** Allocates memory for and returns a string of size size, 
+** with all characters initilized at \0.
+** Returns NULL if allocation fails.
+*/
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strnew(size_t size)
 {
-	char	*dst8;
-	char	*src8;
+	char	*str;
 
-	dst8 = (char *)dst;
-	src8 = (char *)src;
-	while (n--)
-		*dst8++ = *src8++;
-	return(dst);
+	str = ft_memalloc(size);
+	if (str == NULL)
+		return (NULL);
+	bzero(str, size);
+	return (str);
 }
