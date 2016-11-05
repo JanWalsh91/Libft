@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 16:45:07 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 17:59:55 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/05 17:00:04 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 #include "libft.h"
 
-unsigned long	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
-	unsigned long i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

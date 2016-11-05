@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 15:29:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 14:16:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/05 13:56:03 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/05 16:12:32 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** ft_memset writes len bytes of value c (converted to unsigned char)
-** to the string b and returns b.
+** Allocated and returns a copy of a substring of the string s starting at 
+** index start for len bytes.
+** If allocation fails, return NULL.
 */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
+	char	*sub;
+	size_t	i;
+	size_t	j;
 
-	i = 0;
+	j = 0;
+	i = start;
+	sub = ft_memalloc(len + 1);
+	if (sub == NULL)
+		return (NULL);
 	while (i < len)
 	{
-		((char *)b)[i] = (unsigned char)(c);
+		sub[j] = s[i];
 		i++;
+		j++;
 	}
-	return (b);
+	return (sub);
 }

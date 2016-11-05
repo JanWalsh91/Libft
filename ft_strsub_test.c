@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strsub_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 15:29:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 14:16:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/05 15:43:03 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/05 16:15:38 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** ft_memset writes len bytes of value c (converted to unsigned char)
-** to the string b and returns b.
-*/
-
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+
+int		main(void)
 {
-	size_t i;
+	char	s1[50];
+	char	s2[50];
+	
+	strcpy(s1, "abcdefghijklmon");
+	strcpy(s2, "123456789");
 
-	i = 0;
-	while (i < len)
-	{
-		((char *)b)[i] = (unsigned char)(c);
-		i++;
-	}
-	return (b);
+	printf("ft_strsub: %s\n", ft_strsub(s1, 2, 4));
+	printf("ft_strsub: %s\n", ft_strsub(s2, 2, 4));
+
+	return (0);
 }

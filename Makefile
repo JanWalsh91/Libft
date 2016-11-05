@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 15:21:00 by jwalsh            #+#    #+#              #
-#    Updated: 2016/11/04 18:01:10 by jwalsh           ###   ########.fr        #
+#    Updated: 2016/11/05 17:32:42 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,11 @@ SRC = ft_memset.c \
 	  ft_strclr.c \
 	  ft_striter.c \
 	  ft_striteri.c \
-	  ft_strmap.c
+	  ft_strmap.c \
+	  ft_strsub.c \
+	  ft_strjoin.c \
+	  ft_strtrim.c \
+	  ft_strsplit.c
 
 BIN = ft_memset.o \
 	  ft_bzero.o \
@@ -86,11 +90,15 @@ BIN = ft_memset.o \
 	  ft_strclr.o \
 	  ft_striter.o \
 	  ft_striteri.o \
-	  ft_strmap.o
+	  ft_strmap.o \
+	  ft_strsub.o \
+	  ft_strjoin.o \
+	  ft_strtrim.o \
+	  ft_strsplit.o
 
 HEAD = includes/*.h
 
-opti: $(MAKE) all -j
+opti: $(MAKE) all -j4
 
 all: $(NAME)
 

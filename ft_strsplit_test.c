@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 15:29:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 14:16:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/05 17:20:46 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/05 19:19:38 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** ft_memset writes len bytes of value c (converted to unsigned char)
-** to the string b and returns b.
-*/
-
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+size_t	get_word_count(char *s, char c);
+char	**ft_strsplit(char const *s, char c);
+
+int	main(int ac, char **av)
 {
-	size_t i;
-
-	i = 0;
-	while (i < len)
+	size_t	i;
+	if (ac != 2)
 	{
-		((char *)b)[i] = (unsigned char)(c);
+		printf("Please enter 1 parameter\n");
+		return (0);
+	}
+	printf("get_word_count result: %lu\n", get_word_count(av[1], ' '));
+	i = 0;
+	while (i < get_word_count(av[0], ' '))
+	{
+		printf("result: %s\n", ft_strsplit(av[1], ' ')[i]);
 		i++;
 	}
-	return (b);
+	return (0);
 }

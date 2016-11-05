@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 15:29:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 14:16:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/05 16:31:24 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/05 16:36:35 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** ft_memset writes len bytes of value c (converted to unsigned char)
-** to the string b and returns b.
-*/
-
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+int	main(int ac, char **av)
 {
-	size_t i;
-
-	i = 0;
-	while (i < len)
+	if (ac != 3)
 	{
-		((char *)b)[i] = (unsigned char)(c);
-		i++;
+		printf("Please enter two strings\n");
+		return (0);
 	}
-	return (b);
+	printf("ft_strjoin result: %s\n", ft_strjoin(av[1], av[2]));
+	return (0);
 }
