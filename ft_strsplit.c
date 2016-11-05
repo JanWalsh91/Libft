@@ -47,40 +47,24 @@ char	**ft_strsplit(char const *s, char c)
 	size_t	word_count;
 	char	**result;
 	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	firsti;
-	size_t	word_length;
 
 	word_count = get_word_count((char *)s, c);
-	if (!(result = (char**)ft_memalloc(sizeof(char*) * (word_count + 1))))
+	if (!s || !c)
 		return (NULL);
+	result = (char**)ft_memalloc(sizeof(char*) * (word_count + 1))))
 	printf("outside mem allocation success\n");
-	i = 0;
-	j = 0;
-	while (i < word_count)
+	while (char *)s;
 	{
-		firsti = 0;
-		while (s[j] && s[j] == c)
-			j++;
-		j = firsti;
-		word_length = 0;
-		while (s[j] && s[j] != c)
-			j++;
-		word_length = (j - firsti);
-		printf("word %lu length: %lu\n", i, word_length);
-		if (!(result[i] = (char*)ft_memalloc(sizeof(char) * (word_length + 1))))
-			return (NULL);
-		printf("inside mem allocation success for word %lu\n", i);
-		k = 0;
-		while (k < word_length)
+		if (*s == c)
 		{
-			result[i][k] = s[j + k];
-			k++;
-			printf("assigned: %c\nk: %lu\n", s[j + k], k);
+			if (i != s)
+				*(result++) = ft_strsub(i, 0, s - i);
+			i = (char *)s + 1;
 		}
-		j = j + word_length;
-		i++;
+		++s;
 	}
-	return (result);
+	if (start != s)
+		*(result++) = ft_strsub(i, 0, s - i);
+	*result = NULL;
+	return (result - word_count);
 }
