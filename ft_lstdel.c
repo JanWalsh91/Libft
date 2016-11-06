@@ -18,14 +18,17 @@
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void*,size_t))
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list	*p;
 
+	if (!alst)
+		return ;
 	p = *alst;
-	while (p->next != NULL)
+	while (p != NULL)
 	{
-		ft_lstdel(alst, del);
+		del(p->content, p->content_size);
+		free(p);
 		p = p-> next;
 	}
 	*alst = NULL;
