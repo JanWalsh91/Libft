@@ -13,7 +13,6 @@
 /*
 ** Writes n \0 to the string s.
 ** If n is 0, ft_bzero does nothing.
-** Can use ft_memset(s, 0, n) if n > 0
 */
 
 #include "libft.h"
