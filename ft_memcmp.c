@@ -6,12 +6,12 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 13:46:08 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 16:08:43 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/06 14:42:35 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Compares byte string and byte string s2 positive int if s1 > s2, 0 of s1 = s2,
+** Compares byte string and byte string s2 positive int if s1 > s2, 0 if s1=s2,
 ** or a negative int if s1 < s2. The comparision is done with unsigned chars.
 ** Both strings are assumed to be n bytes long.
 */

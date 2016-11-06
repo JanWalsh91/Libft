@@ -6,12 +6,12 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 17:44:03 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 18:01:53 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/06 14:47:36 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Applies the function f to each character in the string s to create a new 
+** Applies the function f to each character in the string s to create a new
 ** string with the resturn values of f.
 ** Returns the new string.
 */
@@ -22,7 +22,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*str;
 	char	*s2;
-	int i;
+	int		i;
 
 	s2 = (char *)s;
 	i = 0;

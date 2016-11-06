@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 16:59:38 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 15:08:13 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/06 14:43:31 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	src8 = (char *)src;
 	while (dst8 && src8 && len--)
 		*dst8++ = *src8++;
-	return(dst);
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 16:39:13 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 17:16:25 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/06 15:17:43 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,40 +18,34 @@
 
 #include "libft.h"
 
-int		is_space(char c)
+static int	is_space(char c)
 {
 	return (c == ' ' || c == '\n' || c == '\t');
 }
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
 	char	*newstr;
-	size_t	l;
 	size_t	i;
 	size_t	j;
 	size_t	start;
 	size_t	end;
 
-	l = ft_strlen(s) + 1;
-	if (l == 1)
+	if (ft_strlen(s) == 0)
 		return (NULL);
-	newstr = (char *)ft_memalloc(sizeof(char) * l);
+	newstr = (char *)ft_memalloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (newstr == NULL)
 		return (NULL);
 	i = 0;
 	while (s[i] && is_space(((char *)s)[i]))
 		i++;
 	start = i;
-	j = l - 2;
+	j = ft_strlen(s) - 1;
 	while (s[j] && is_space(((char *)s)[j]))
 		j--;
 	end = j;
 	i = 0;
 	while (start <= end)
-	{
-		newstr[i] = ((char *)s)[start];
-		start++;
-		i++;
-	}
+		newstr[i++] = ((char *)s)[start++];
 	return (newstr);
 }

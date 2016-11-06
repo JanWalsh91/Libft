@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 18:02:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 14:47:17 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/06 14:07:35 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/06 14:08:27 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Applies the function f to each character in the string s to create a new
-** string with the resturn values of f. f takes the index of the char as well.
-** Returns the new string.
-*/
-
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putnbr(int nb)
 {
-	char			*str;
-	char			*s2;
-	unsigned int	i;
-
-	s2 = (char *)s;
-	i = 0;
-	str = ft_strnew(ft_strlen(s2) + 1);
-	while (s2[i])
+	if (nb < 0)
 	{
-		str[i] = (*f)(i, s2[i]);
-		i++;
+		ft_putchar('-');
+		if (nb == -2147483648)
+		{
+			ft_putchar('2');
+			nb += 2000000000;
+		}
+		nb = nb * -1;
 	}
-	return (str);
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	ft_putchar((nb % 10) + '0');
 }

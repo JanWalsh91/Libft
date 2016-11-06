@@ -6,12 +6,12 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 13:56:03 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 16:12:32 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/06 14:55:58 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocated and returns a copy of a substring of the string s starting at 
+** Allocated and returns a copy of a substring of the string s starting at
 ** index start for len bytes.
 ** If allocation fails, return NULL.
 */

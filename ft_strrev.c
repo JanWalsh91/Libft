@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 18:02:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 14:47:17 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/06 11:53:26 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/06 13:56:25 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Applies the function f to each character in the string s to create a new
-** string with the resturn values of f. f takes the index of the char as well.
-** Returns the new string.
-*/
-
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strrev(char *str)
 {
-	char			*str;
-	char			*s2;
-	unsigned int	i;
+	int		length;
+	char	temp;
+	int		i;
 
-	s2 = (char *)s;
 	i = 0;
-	str = ft_strnew(ft_strlen(s2) + 1);
-	while (s2[i])
+	length = ft_strlen(str) - 1;
+	if (length < 1)
+		return (str);
+	while (i < (length / 2) + 1)
 	{
-		str[i] = (*f)(i, s2[i]);
+		temp = str[i];
+		str[i] = str[length - i];
+		str[length - i] = temp;
 		i++;
 	}
 	return (str);

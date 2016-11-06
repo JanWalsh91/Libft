@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 15:21:00 by jwalsh            #+#    #+#              #
-#    Updated: 2016/11/05 17:32:42 by jwalsh           ###   ########.fr        #
+#    Updated: 2016/11/06 17:36:43 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,10 +50,29 @@ SRC = ft_memset.c \
 	  ft_striter.c \
 	  ft_striteri.c \
 	  ft_strmap.c \
+	  ft_strmapi.c \
+	  ft_strequ.c \
+	  ft_strnequ.c \
 	  ft_strsub.c \
 	  ft_strjoin.c \
 	  ft_strtrim.c \
-	  ft_strsplit.c
+	  ft_strsplit.c \
+	  ft_strrev.c \
+	  ft_itoa.c \
+	  ft_putchar.c \
+	  ft_putstr.c \
+	  ft_putendl.c \
+	  ft_putnbr.c \
+	  ft_putchar_fd.c \
+	  ft_putstr_fd.c \
+	  ft_putendl_fd.c \
+	  ft_putnbr_fd.c \
+	  ft_lstnew.c \
+	  ft_lstdelone.c \
+	  ft_lstdel.c \
+	  ft_lstadd.c \
+	  ft_lstiter.c \
+	  ft_lstmap.c
 
 BIN = ft_memset.o \
 	  ft_bzero.o \
@@ -91,14 +110,31 @@ BIN = ft_memset.o \
 	  ft_striter.o \
 	  ft_striteri.o \
 	  ft_strmap.o \
+	  ft_strmapi.o \
+	  ft_strequ.o \
+	  ft_strnequ.o \
 	  ft_strsub.o \
 	  ft_strjoin.o \
 	  ft_strtrim.o \
-	  ft_strsplit.o
+	  ft_strsplit.o \
+	  ft_strrev.o \
+	  ft_itoa.o \
+	  ft_putchar.o \
+	  ft_putstr.o \
+	  ft_putendl.o \
+	  ft_putnbr.o \
+	  ft_putchar_fd.o \
+	  ft_putstr_fd.o \
+	  ft_putendl_fd.o \
+	  ft_putnbr_fd.o \
+	  ft_lstnew.o \
+	  ft_lstdelone.o \
+	  ft_lstdel.o \
+	  ft_lstadd.o \
+	  ft_lstiter.o \
+	  ft_lstmap.o
 
-HEAD = includes/*.h
-
-opti: $(MAKE) all -j4
+HEAD = libft.h
 
 all: $(NAME)
 
@@ -112,5 +148,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean
-	all
+re: fclean all

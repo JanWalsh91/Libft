@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 18:02:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 14:47:17 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/06 15:39:16 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/06 16:04:51 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Applies the function f to each character in the string s to create a new
-** string with the resturn values of f. f takes the index of the char as well.
-** Returns the new string.
+** Frees the memory of the content of a link whose pointer is passed as a
+** parameter with the del function.
+** Frees the memory of the link.
+** The freed t_list pointer must now be NULL pointer.
 */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	char			*str;
-	char			*s2;
-	unsigned int	i;
-
-	s2 = (char *)s;
-	i = 0;
-	str = ft_strnew(ft_strlen(s2) + 1);
-	while (s2[i])
-	{
-		str[i] = (*f)(i, s2[i]);
-		i++;
-	}
-	return (str);
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
 }

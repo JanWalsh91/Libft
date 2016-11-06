@@ -6,12 +6,12 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:41:22 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 14:22:18 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/06 14:32:54 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Returns 1 if char is alpha, 0 if not. 
+** Returns 1 if char is alpha, 0 if not.
 */
 
 #include "libft.h"
