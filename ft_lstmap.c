@@ -20,16 +20,23 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*p;
+	t_list	*tmp;
 	t_list	*new;
 
 	//pass content through function
 	//put result in new link
 	//link it to the previous link. the first one points to NULL.
-	p = lst;
-	new = ft_lstnew((f(p)->content), (f(p))->content_size);
-	while ()
+	if (!lst)
+		return (NULL);
+	if (!(new_list - ft_lstnew(lst->content, lst->content_size)))
+		return (NULL);
+	tmp = lst;
+	new = f(lst);
+	while (lst->next != NULL)
 	{
-		ft_lstadd(, );
+		p->next = f(lst->next);
+		lst = lst->next;
+		p = p->next;
 	}
+	return (new);
 }
