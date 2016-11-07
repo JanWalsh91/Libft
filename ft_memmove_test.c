@@ -6,41 +6,67 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:36:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 16:05:03 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/07 17:39:11 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memmove(char *dst, const char *scr, size_t len);
-
-int	main (void)
+int	main (int ac, char **av)
 {
-	char		dest[] = "123456789";
-	char		src[]  = "abcdefghi";
+	char	*src;
+	char	*dst;
+	size_t	len;
 
-	printf("Before memmove dest = %s, src = %s\n", dest, src);
-	printf("return value of memmove: %s\n", memmove(dest, src, 5));
-	printf("After memmove dest = %s, src = %s\n---\n", dest, src);
-	
-	char		dest2[] = "123456789";
-	char		src2[]  = "abcdefghi";
-
-	printf("Before ft_memmove dest2 = %s, src = %s\n", dest2, src2);
-	printf("return value of ft_memmove: %s\n", ft_memmove(dest2, src2, 5));
-	printf("After ft_memmove dest2 = %s, src2 = %s\n---\n", dest2, src2);
-
-	char		test[] = "123456789";
-
-	printf("Before memmove test = %s\n", test);
-	printf("return value of memmove: %s\n", memmove(test, test + 3, 5));
-	printf("After memmove test = %s\n---\n", test);
-	
-	char		test2[] = "123456789";
-
-	printf("Before ft_memmove test2 = %s\n", test2);
-	printf("return value of ft_memmove: %s\n", ft_memmove(test2, test2 + 3, 5));
-	printf("After ft_memmove test2 = %s\n", test2);
-	return(0);
+	if (ac != 4 && ac != 3)
+	{
+		printf("Please enter dst, src, len or dst, len for testing overlap\n");
+		return (0);
+	}
+	if (ac == 4)
+	{
+		src = ft_memalloc(sizeof(av[0]));
+		dst = ft_memalloc(sizeof(av[1]));
+		dst = strcpy(dst, av[1]);
+		src = strcpy(src, av[2]);
+		len = ft_atoi(av[3]);
+		printf("dst: %s\n", dst);
+		printf("src: %s\n", src);
+		printf("memmove result: %s\n", memmove(dst, src, len));
+		printf("dst: %s\n", dst);
+		printf("src: %s\n --- \n", src);
+		dst = strcpy(dst, av[1]);
+		src = strcpy(src, av[2]);
+		len = ft_atoi(av[3]);
+		printf("dst: %s\n", dst);
+		printf("src: %s\n", src);
+		printf("ft_memmove result: %s\n", ft_memmove(dst, src, len));
+		printf("dst: %s\n", dst);
+		printf("src: %s\n", src);
+		return(0);
+	}
+	if (ac == 3)
+	{
+		src = ft_memalloc(sizeof(av[1]));
+		dst = ft_memalloc(sizeof(av[1]));
+		dst = strcpy(dst, av[1]);
+		src = strcpy(src, av[1]);
+		len = ft_atoi(av[2]);
+		printf("dst: %s\n", dst);
+		printf("src: %s\n", src);
+		printf("memmove result: %s\n", memmove(dst, src + 2, len));
+		printf("dst: %s\n", dst);
+		printf("src: %s\n --- \n", src);
+		dst = strcpy(dst, av[1]);
+		src = strcpy(src, av[1]);
+		len = ft_atoi(av[2]);
+		printf("dst: %s\n", dst);
+		printf("src: %s\n", src);
+		printf("ft_memmove result: %s\n", ft_memmove(dst, src + 2, len));
+		printf("dst: %s\n", dst);
+		printf("src: %s\n", src);
+		return(0);
+	}
 }

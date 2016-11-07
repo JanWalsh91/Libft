@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:30:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 11:35:55 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/06 14:44:02 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,9 @@ int	main(void)
 
 	strcpy(str, "This is a test.");
 	puts(str);
-
 	memset(str, '$', 20);
 	puts(str);
-
 	ft_memset(str, 'o', 10);
 	puts(str);
-
 	return (0);
 }

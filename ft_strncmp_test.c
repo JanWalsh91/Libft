@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 17:22:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/07 17:27:00 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/07 14:36:49 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/07 15:13:40 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strcpy(char *dst, char *src)
+int	main(int ac, char **av)
 {
-	int	i;
+	char	*s1;
+	char	*s2;
+	int		i;
 
-	i = 0;
-	while (src[i] || dst[i])
+	if (ac != 4)
 	{
-		dst[i] = src[i];
-		i++;
+		printf("Please enter s1, s2, size\n");
+		return (0);
 	}
-	dst[i] = '\0';
-	return (dst);
+	s1 = av[1];
+	s2 = av[2];
+	i = ft_atoi(av[3]);
+	printf("s1: %s\ns2: %s\ni: %d\n", s1, s2, i);
+	printf("strncmp: %d\n", strncmp(s1, s2, i));
+	printf("ft_strncmp: %d\n", ft_strncmp(s1, s2, i));
 }

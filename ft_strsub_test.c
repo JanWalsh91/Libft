@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 15:43:03 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 16:15:38 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/06 14:50:39 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ int		main(void)
 {
 	char	s1[50];
 	char	s2[50];
-	
+
 	strcpy(s1, "abcdefghijklmon");
 	strcpy(s2, "123456789");
-
 	printf("ft_strsub: %s\n", ft_strsub(s1, 2, 4));
 	printf("ft_strsub: %s\n", ft_strsub(s2, 2, 4));
-
 	return (0);
 }

@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 17:22:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/07 17:27:00 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/07 14:02:42 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/07 14:33:18 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strcpy(char *dst, char *src)
+int	main(void)
 {
-	int	i;
+	char	c;
+	char	*str;
 
-	i = 0;
-	while (src[i] || dst[i])
+	c = 0;
+	str = NULL;
+	str = (ft_strnew(50));
+	str = (strcpy(str, "12345"));
+	while (c < 1)
 	{
-		dst[i] = src[i];
-		i++;
+		str[0] = c;
+		printf("c : %i\n", c);
+		printf("   atoi: %i\n", atoi("/200123"));
+		printf("ft_atoi: %i\n", ft_atoi("/200123"));
+		c++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	return (0);
 }

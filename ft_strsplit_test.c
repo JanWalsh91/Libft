@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 17:20:46 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 19:19:38 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/06 14:50:13 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 size_t	get_word_count(char *s, char c);
 char	**ft_strsplit(char const *s, char c);
 
-int	main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	size_t	i;
+
 	if (ac != 2)
 	{
 		printf("Please enter 1 parameter\n");
@@ -26,9 +27,9 @@ int	main(int ac, char **av)
 	}
 	printf("get_word_count result: %lu\n", get_word_count(av[1], ' '));
 	i = 0;
-	while (i < get_word_count(av[0], ' '))
+	while (i < get_word_count(av[1], ' '))
 	{
-		printf("result: %s\n", ft_strsplit(av[1], ' ')[i]);
+		printf("final result[%lu]: %s\n", i, ft_strsplit(av[1], ' ')[i]);
 		i++;
 	}
 	return (0);
