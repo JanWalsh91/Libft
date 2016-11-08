@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 17:18:09 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 14:49:25 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/08 18:33:31 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnew(size_t size)
 {
 	char	*str;
 
-	str = ft_memalloc(size);
+	str = ft_memalloc(size + 1);
 	if (str == NULL)
 		return (NULL);
 	bzero(str, size);

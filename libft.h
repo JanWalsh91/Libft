@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/07 17:08:35 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/08 18:55:37 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t			ft_strlen(const char *s);
 char			*ft_strdup(char *src);
-char			*ft_strcpy(char *dst, char *src);
-char			*ft_strncpy(char *dest, char *src, size_t n);
+char			*ft_strcpy(char *dst, const char *src);
+char			*ft_strncpy(char *dest, const char *src, size_t n);
 char			*ft_strcat(char *s1, char *s2);
 char			*ft_strncat(char *s1, char *s2, int nb);
 unsigned int	ft_strlcat(char *dst, char *src, size_t size);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *str, const char *to_find);
-char			*ft_strnstr(const char *str, const char *to_find, size_t len);
+char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_atoi(const char *str);
@@ -79,8 +79,9 @@ void			ft_putnbr_fd(int n, int fd);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstadd(t_list **alst, t_list *n);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void			ft_strnewcpy(char **dst, char *src);
 
 #endif

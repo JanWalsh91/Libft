@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 16:39:13 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 15:17:43 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/08 18:55:35 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ char		*ft_strtrim(char const *s)
 
 	if (ft_strlen(s) == 0)
 		return (NULL);
-	newstr = (char *)ft_memalloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (newstr == NULL)
+	if (!(newstr = (char *)ft_memalloc(sizeof(char) * (ft_strlen(s) + 1))))
 		return (NULL);
 	i = 0;
 	while (s[i] && is_space(((char *)s)[i]))

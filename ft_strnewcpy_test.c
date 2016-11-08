@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnewcpy_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/08 15:14:33 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/08 12:18:14 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/08 12:33:29 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Copies n bytes from src to dst. If dst and src overlap,
-** behavior is undefined.
-*/
-
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	main(int ac, char **av)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	char	*dst;
 
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
-	if (dst == src || n == 0)
-		return (dst);
-	i = 0;
-	while (i < n)
+	if (ac != 2)
 	{
-		d[i] = s[i];
-		i++;
+		printf("Please enter one string to cpy\n");
+		return (0);
 	}
-	return (dst);
+	dst = NULL;
+	ft_strnewcpy(&dst, av[1]);
+	printf("result of cpy: %s\n", dst);
+	dst[1] = 'O';
+	av[1][1] = 'R';
+	printf("Post-modification:\ndst: %s\nav[1]: %s\n", dst, av[1]);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 17:08:33 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/04 17:14:40 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/08 18:20:35 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	*ft_memalloc(size_t size)
 
 	if (!(p = malloc(size)))
 		return (NULL);
-	p = ft_memset(p, 0, size);
+	if (!(p = ft_memset(p, 0, size)))
+		return (NULL);
 	return (p);
 }

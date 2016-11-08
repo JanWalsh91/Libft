@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 12:56:38 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/08 18:00:35 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/08 12:14:00 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/08 16:06:46 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strstr(const char *big, const char *little)
+int	main(int ac, char **av)
 {
-	int	i;
-	int	j;
-	int	l;
+	char	*src;
+	char	*dst;
 
-	i = 0;
-	if (*little == '\0')
-		return ((char *)big);
-	l = ft_strlen(little);
-	while (big[i])
+	if (ac != 3)
 	{
-		if (big[i] == little[0])
-		{
-			j = 0;
-			while (big[i + j] && big[i + j] == little[j] && little[j])
-			{
-				j++;
-			}
-			if (j == l)
-				return ((char *)&big[i]);
-		}
-		i++;
+		printf("Please input src and dst\n");
+		return (0);
 	}
+	ft_strnewcpy(&src, av[2]);
+	ft_strnewcpy(&dst, av[1]);
+	printf("src: %s\ndst: %s\n", src, dst);
+	printf("strcpy result: %s\n -- \n", strcpy(dst, src));
+	ft_strnewcpy(&src, av[2]);
+	ft_strnewcpy(&dst, av[1]);
+	printf("src: %s\ndst: %s\n", src, dst);
+	printf("ft_strcpy result: %s\n", ft_strcpy(dst, src));
+	
+
 	return (0);
 }

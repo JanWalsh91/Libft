@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:03:09 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 16:06:15 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/08 18:15:31 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,29 @@
 ** characters are searched.
 */
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t	to_find_length;
+	size_t	l;
 
 	i = 0;
-	to_find_length = 0;
-	while (to_find[to_find_length])
-		to_find_length++;
-	while (i++ < len)
+	if (*little == '\0')
+		return ((char *)big);
+	l = ft_strlen(little);
+	while (i < len)
 	{
-		if (str[i] == to_find[0])
+		j = 0;
+		if (big[i] == little[j])
 		{
-			j = 0;
-			while (str[i + j] && str[i + j] == to_find[j] && to_find[j])
+			while (big[i + j] && big[i + j] == little[j] && little[j] && i + j < len)
 			{
 				j++;
 			}
-			if (j == to_find_length)
-				return ((char *)&str[i]);
+			if (j == l)
+				return ((char *)&big[i]);
 		}
+		i++;
 	}
 	return (0);
 }

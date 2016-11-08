@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnewcpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:35:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/08 15:14:33 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/08 12:14:53 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/08 13:23:12 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Copies n bytes from src to dst. If dst and src overlap,
-** behavior is undefined.
+** Makes a copy of a string which is independently modifiable from the
+** original one.
 */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_strnewcpy(char **dst, char *src)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	int	i;
 
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
-	if (dst == src || n == 0)
-		return (dst);
+	if (!(*dst = ft_memalloc(sizeof(char) * (ft_strlen(src) + 1))))
+		return ;
 	i = 0;
-	while (i < n)
+	while (src[i])
 	{
-		d[i] = s[i];
+		(*dst)[i] = src[i];
 		i++;
 	}
-	return (dst);
+	(*dst)[i] = src[i];
 }

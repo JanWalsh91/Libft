@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:36:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/07 17:39:11 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/08 14:09:24 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,16 @@ int	main (int ac, char **av)
 	}
 	if (ac == 4)
 	{
-		src = ft_memalloc(sizeof(av[0]));
-		dst = ft_memalloc(sizeof(av[1]));
-		dst = strcpy(dst, av[1]);
-		src = strcpy(src, av[2]);
+		ft_strnewcpy(&dst, av[1]);
+		ft_strnewcpy(&src, av[2]);
 		len = ft_atoi(av[3]);
 		printf("dst: %s\n", dst);
 		printf("src: %s\n", src);
 		printf("memmove result: %s\n", memmove(dst, src, len));
 		printf("dst: %s\n", dst);
 		printf("src: %s\n --- \n", src);
-		dst = strcpy(dst, av[1]);
-		src = strcpy(src, av[2]);
+		ft_strnewcpy(&dst, av[1]);
+		ft_strnewcpy(&src, av[2]);
 		len = ft_atoi(av[3]);
 		printf("dst: %s\n", dst);
 		printf("src: %s\n", src);

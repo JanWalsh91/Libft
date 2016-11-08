@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 17:44:03 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 14:47:36 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/08 18:45:17 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	s2 = (char *)s;
 	i = 0;
-	str = ft_strnew(ft_strlen(s2) + 1);
+	if (!(str = ft_strnew(ft_strlen(s2))))
+		return (0);
 	while (s2[i])
 	{
 		str[i] = (*f)(s2[i]);

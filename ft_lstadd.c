@@ -6,19 +6,19 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 16:23:42 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 17:17:04 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/08 11:17:38 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd(t_list **alst, t_list *n)
 {
-	if (new)
+	if (n)
 	{
 		if (!(*alst))
-			*alst = new;
-		new->next = *alst;
-		alst = &new;
+			*alst = n;
+		n->next = *alst;
+		alst = &n;
 	}
 }
