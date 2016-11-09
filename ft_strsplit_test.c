@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 17:20:46 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 14:50:13 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/09 13:51:06 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <stdio.h>
 
 size_t	get_word_count(char *s, char c);
-char	**ft_strsplit(char const *s, char c);
 
 int		main(int ac, char **av)
 {
@@ -25,7 +24,7 @@ int		main(int ac, char **av)
 		printf("Please enter 1 parameter\n");
 		return (0);
 	}
-	printf("get_word_count result: %lu\n", get_word_count(av[1], ' '));
+	//printf("get_word_count result: %lu\n", get_word_count(av[1], ' '));
 	i = 0;
 	while (i < get_word_count(av[1], ' '))
 	{
@@ -34,3 +33,8 @@ int		main(int ac, char **av)
 	}
 	return (0);
 }
+
+/*
+** lskdhjf
+** 
+*/

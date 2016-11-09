@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 17:44:03 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/08 18:45:17 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/09 18:12:59 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*s2;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	s2 = (char *)s;
 	i = 0;
 	if (!(str = ft_strnew(ft_strlen(s2))))

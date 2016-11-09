@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:36:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/08 14:09:24 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/09 17:43:05 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	main (int ac, char **av)
 		len = ft_atoi(av[2]);
 		printf("dst: %s\n", dst);
 		printf("src: %s\n", src);
-		printf("memmove result: %s\n", memmove(dst, src + 2, len));
+		printf("memmove result: %s\n", memmove(dst + 3, src, len));
 		printf("dst: %s\n", dst);
 		printf("src: %s\n --- \n", src);
 		dst = strcpy(dst, av[1]);
@@ -62,7 +62,7 @@ int	main (int ac, char **av)
 		len = ft_atoi(av[2]);
 		printf("dst: %s\n", dst);
 		printf("src: %s\n", src);
-		printf("ft_memmove result: %s\n", ft_memmove(dst, src + 2, len));
+		printf("ft_memmove result: %s\n", ft_memmove(dst + 3, src, len));
 		printf("dst: %s\n", dst);
 		printf("src: %s\n", src);
 		return(0);

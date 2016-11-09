@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 16:41:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/08 18:15:43 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/09 17:53:12 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,16 @@ int	main(int ac, char **av)
 	ft_strnewcpy(&small2, av[2]);
 	printf("big: %s\nsmall: %s\n", big2, small2);
 	printf("ft_strnstr result: %s\n", ft_strnstr(big2, small2, ft_atoi(av[3])));
+
+	char	buf[10];
+
+	bzero(buf, 10);
+	strcpy(buf, "un deux 9");
+	buf[9]	 = '6';
+	buf[1] = 0;
+	printf("buf: %s\n", buf);
+	printf("strnstr %s\n", strnstr(buf, "deux", 10));
+	printf("ft_strnstr %s\n", ft_strnstr(buf, "deux", 10));
 	return (0);
+
 }

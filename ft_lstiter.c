@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 16:27:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 16:31:23 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/09 17:04:07 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	t_list	*p;
-	
+
 	if (!lst)
 		return ;
 	p = lst;

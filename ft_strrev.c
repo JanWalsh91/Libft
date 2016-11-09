@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 11:53:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 13:56:25 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/09 14:25:29 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrev(char *str)
 	length = ft_strlen(str) - 1;
 	if (length < 1)
 		return (str);
-	while (i < (length / 2) + 1)
+	while (i < (length / 2 + 1))
 	{
 		temp = str[i];
 		str[i] = str[length - i];

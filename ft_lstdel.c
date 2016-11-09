@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 16:07:32 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 16:22:24 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/09 17:03:42 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	{
 		del(p->content, p->content_size);
 		free(p);
-		p = p-> next;
+		p = p->next;
 	}
 	*alst = NULL;
 }

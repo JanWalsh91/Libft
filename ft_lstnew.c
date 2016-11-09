@@ -6,13 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 14:37:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 17:11:15 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/09 17:27:20 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocated memory for and returns a new link with the content and 
-** content size passed in parameters. 
+** Allocated memory for and returns a new link with the content and
+** content size passed in parameters.
 */
 
 #include "libft.h"

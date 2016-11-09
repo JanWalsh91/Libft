@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 16:31:38 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/07 13:23:21 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/09 17:03:12 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,14 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*tmp;
 	t_list	*new;
+	t_list	*new2;
 
-	//pass content through function
-	//put result in new link
-	//link it to the previous link. the first one points to NULL.
-	new = NULL;
-	if (!lst)
+	if (lst == NULL)
 		return (NULL);
-	if (!(new - ft_lstnew(lst->content, lst->content_size)))
+	new2 = ft_lstmap(lst->next, f);
+	if (!(new = f(lst)))
 		return (NULL);
-	tmp = lst;
-	new = f(lst);
-	while (lst->next != NULL)
-	{
-		tmp->next = f(lst->next);
-		lst = lst->next;
-		tmp = tmp->next;
-	}
+	new->next = new2;
 	return (new);
 }
