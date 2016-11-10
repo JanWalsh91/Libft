@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 16:39:13 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 18:36:02 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 14:38:02 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,28 @@ static int	is_space(char c)
 char		*ft_strtrim(char const *s)
 {
 	char	*newstr;
-	size_t	i;
-	size_t	j;
-	size_t	start;
-	size_t	end;
+	int		i;
+	int		start;
+	int		end;
 
-	if (!s)
-		return ("\0");
 	i = 0;
-	while (s[i] && is_space(((char *)s)[i]))
+	if (s == NULL)
+		return (NULL);
+	while (s && is_space(s[i]))
 		i++;
+	if (s && !s[i])
+		return (ft_memalloc(1));
 	start = i;
-	if (start == ft_strlen(s))
-		return ("\0");
-	j = ft_strlen(s) - 1;
-	while (s[j] && is_space(((char *)s)[j]))
-		j--;
-	end = j;
+	if (s && s[start] == '\0')
+		return (ft_memalloc(1));
+	end = ft_strlen(s) - 1;
+	while (s && end >= 0 && s[end] && is_space(s[end]))
+		end--;
 	i = 0;
 	if (!(newstr = (char *)ft_memalloc(sizeof(char) * (end - start + 2))))
 		return (NULL);
-	while (start <= end)
-		newstr[i++] = ((char *)s)[start++];
+	while (s && start <= end)
+		newstr[i++] = s[start++];
 	newstr[i++] = '\0';
 	return (newstr);
 }
