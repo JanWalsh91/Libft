@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:32:54 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/10 16:14:34 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 19:03:06 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ char	*ft_strncat(char *s1, char *s2, int nb)
 	int	i;
 	int	j;
 
-	i = 0;
+	i = ft_strlen(s1);
 	j = 0;
-	while (s1[i])
-		i++;
 	while (s2[j] && j < nb)
 	{
 		s1[i + j] = s2[j];

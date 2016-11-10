@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:56:38 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/10 16:26:50 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 19:20:38 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strstr(const char *big, const char *little)
 				j++;
 			}
 			if (j == l)
-				return ((char *)&big[i]);
+				return ((char *)(big + i));
 		}
 		i++;
 	}
