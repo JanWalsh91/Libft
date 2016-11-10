@@ -6,16 +6,19 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:03:09 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/10 11:40:23 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 16:22:43 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 /*
 ** Locates first occurrence of substring in string where no more than len
-** characters are searched.
+** characters are searched and returns a pointer to the beginning of that
+** substring.
+** If little is an empty string, big is returned.
+** If little occurrs nowhere in big, NULL is returned.
 */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -36,9 +39,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 					little[j] && i + j < len)
 				j++;
 			if (j == l)
-				return ((char *)&big[i]);
+				return ((char *)(big + i));
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

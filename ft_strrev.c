@@ -6,9 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 11:53:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 14:25:29 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 16:24:28 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Reverses the chars in a string and returns the string.
+*/
 
 #include "libft.h"
 

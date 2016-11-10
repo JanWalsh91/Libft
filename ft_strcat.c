@@ -6,13 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:28:21 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/07 18:35:16 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:26:13 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Append a copy of the null-terminated string s2 to the end of the null-
-** terminated string s1, then add a terminating '\0'.
+** Appends a copy of the null-terminated string s2 to the end of the null-
+** terminated string s1, then add a terminating null character.
 ** Behavior is undefined for overlapping strings.
 */
 
@@ -24,16 +24,11 @@ char	*ft_strcat(char *s1, char *s2)
 	int	j;
 
 	i = 0;
-	j = 0;
+	j = -1;
 	while (s1[i])
-	{
 		i++;
-	}
-	while (s2[j])
-	{
+	while (s2[++j])
 		s1[i + j] = s2[j];
-		j++;
-	}
 	s1[i + j] = s2[j];
 	return (s1);
 }

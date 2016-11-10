@@ -6,9 +6,15 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 14:15:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 12:36:57 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 14:45:52 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Converts the initial portion of the string pointed to by str to int
+** representation. Ignores ht, nl, vt, np (new page), cr (carriage return)
+** and space.
+*/
 
 #include "libft.h"
 
@@ -31,10 +37,7 @@ int	ft_atoi(const char *str)
 			sign = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + str[i] - '0';
-		i++;
-	}
+	while (ft_isdigit(str[i]))
+		result = result * 10 + str[i++] - '0';
 	return ((int)(sign * result));
 }

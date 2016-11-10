@@ -6,9 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 13:59:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 14:54:33 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:17:33 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Writes the character c to standard output.
+*/
 
 #include "libft.h"
 

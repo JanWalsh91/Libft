@@ -6,9 +6,15 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:30:34 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/05 13:53:23 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:10:07 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Locates the first occurence of c (converted to an unsigned char)
+** in string s. Returns a pointer to the byte located, or NULL if
+** no such byte exists within n bytes.
+*/
 
 #include "libft.h"
 

@@ -6,14 +6,14 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 16:39:13 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/10 14:38:02 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 16:29:01 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocated memory to and returns a copy of string s without spaces,
-** newlines ('\n') and horizontal tabulations ('\t').
-** If memoryory allocation fails, return NULL.
+** Allocates memory to and returns a copy of string s without spaces,
+** newlines ('\n') and horizontal tabulations ('\t') at the beginning at end.
+** If memory allocation fails, return NULL.
 */
 
 #include "libft.h"

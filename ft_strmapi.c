@@ -6,13 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 18:02:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 18:14:42 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:44:18 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Applies the function f to each character in the string s to create a new
-** string with the resturn values of f. f takes the index of the char as well.
+** string with the return values of f. f takes the index of the char as well.
 ** Returns the new string.
 */
 
@@ -32,7 +32,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s2[i])
 	{
-		str[i] = (*f)(i, s2[i]);
+		str[i] = f(i, s2[i]);
 		i++;
 	}
 	return (str);

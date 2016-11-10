@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:46:51 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/08 13:49:43 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:08:29 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ** in src, the copy stops and a pointer to the byte after the copy of c
 ** in the string dst is returned. Otherwise, n bytes are copied and a NULL
 ** pointer is returned.
-** behavior is undefined in overlapping src and dest strings.
+** Behavior is undefined in overlapping src and dest strings.
 */
 
 #include "libft.h"

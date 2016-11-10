@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:18:58 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/10 14:42:44 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/10 14:47:17 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/10 14:56:49 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Writes n \0 to the string s.
-** If n is 0, ft_bzero does nothing.
+** Returns 1 if c is uppercase, 0 if not.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_isupper(int c)
 {
-	if (n == 0)
-		return ;
-	if (n > 0)
-		ft_memset(s, 0, n);
+	return ('A' <= c && c <= 'Z');
 }

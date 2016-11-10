@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:18:58 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/10 14:42:44 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/10 14:48:33 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/10 14:56:51 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Writes n \0 to the string s.
-** If n is 0, ft_bzero does nothing.
+** Return 1 if c is lowercase, 0 if not.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_islower(int c)
 {
-	if (n == 0)
-		return ;
-	if (n > 0)
-		ft_memset(s, 0, n);
+	return ('a' <= c && c <= 'z');
 }

@@ -6,9 +6,15 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:04:01 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 17:36:40 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:34:05 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Allocated sufficient memory for a copy of the string s1, does the copy,
+** and returns a pointer to it. The pointer may subsequendly be used as an
+** argument to the function free(3).
+*/
 
 #include "libft.h"
 

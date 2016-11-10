@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_clamp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:18:58 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/10 14:42:44 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/10 16:37:27 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/11/10 16:40:36 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Writes n \0 to the string s.
-** If n is 0, ft_bzero does nothing.
+** Changes the value of int i to max if i > max, or to min if i < min.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_clamp(int min, int max, int i)
 {
-	if (n == 0)
-		return ;
-	if (n > 0)
-		ft_memset(s, 0, n);
+	if (i < min)
+		i = min;
+	if (i > max)
+		i = max;
+	return (i);
 }

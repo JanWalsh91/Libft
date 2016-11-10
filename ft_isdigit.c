@@ -6,20 +6,17 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 14:24:05 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/07 13:56:19 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 14:57:25 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Returns 1 if char is digit, 0 if not.
+** Returns 1 if c is digit, 0 if not.
 */
 
 #include "libft.h"
 
 int	ft_isdigit(int c)
 {
-	if ('0' <= c && c <= '9')
-		return (1);
-	else
-		return (0);
+	return ('0' <= c && c <= '9');
 }

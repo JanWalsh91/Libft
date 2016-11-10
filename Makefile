@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 15:21:00 by jwalsh            #+#    #+#              #
-#    Updated: 2016/11/10 14:38:00 by jwalsh           ###   ########.fr        #
+#    Updated: 2016/11/10 16:54:01 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,11 @@ SRC = ft_memset.c \
 	  ft_lstadd.c \
 	  ft_lstiter.c \
 	  ft_lstmap.c \
-	  ft_strnewcpy.c
+	  ft_strnewcpy.c \
+	  ft_islower.c \
+	  ft_isupper.c \
+	  ft_strjoinfree.c \
+	  ft_clamp.c
 
 BIN = ft_memset.o \
 	  ft_bzero.o \
@@ -134,7 +138,11 @@ BIN = ft_memset.o \
 	  ft_lstadd.o \
 	  ft_lstiter.o \
 	  ft_lstmap.o \
-	  ft_strnewcpy.o
+	  ft_strnewcpy.o \
+	  ft_isupper.o \
+	  ft_islower.o \
+	  ft_strjoinfree.o \
+	  ft_clamp.o
 
 HEAD = libft.h
 

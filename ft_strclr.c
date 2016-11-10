@@ -6,12 +6,12 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 17:29:32 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 18:11:12 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:29:49 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Assigns \0 to all chars of the char string passed as a parameter.
+** Assigns \0 to all chars of the string s.
 */
 
 #include "libft.h"

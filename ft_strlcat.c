@@ -6,13 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:36:56 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/07 13:27:09 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 16:14:47 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Concatenate two strings Guarentees nul-terminating result as long as there
-** is one byte free in dst.
+** Concatenates two strings Guarentees nul-terminating result as long as there
+** is one byte free in dst. The byte for the \0 should be included in size.
 ** Behavior for overlapping strings is undefined.
 */
 

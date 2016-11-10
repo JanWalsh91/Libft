@@ -6,20 +6,17 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:41:22 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 14:32:54 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 14:56:53 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Returns 1 if char is alpha, 0 if not.
+** Returns 1 if c is upper or lower case alpha, 0 if not.
 */
 
 #include "libft.h"
 
 int	ft_isalpha(int c)
 {
-	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	return (ft_isupper(c) || ft_islower(c));
 }

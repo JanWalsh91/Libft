@@ -6,9 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 14:01:33 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 15:37:28 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:24:24 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Writes the string s to the standard output.
+*/
 
 #include "libft.h"
 

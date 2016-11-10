@@ -6,9 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 17:25:46 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 18:12:12 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:32:31 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Frees the string pointed to by as, and assigns its pointer to NULL.
+*/
 
 #include "libft.h"
 

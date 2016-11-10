@@ -6,9 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 14:17:23 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 14:19:07 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:23:52 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Writes the int nb to the file descriptor fd.
+*/
 
 #include "libft.h"
 

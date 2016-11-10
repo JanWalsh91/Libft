@@ -6,9 +6,16 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:32:54 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 17:20:08 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 16:14:34 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Appends a copy of the null-terminated string s2 to the end of the
+** null-terminated string s1, then adds a terminating'\0'.
+** Will not append more than n characters from s2, and then adds '\0'.
+** s1 and s2 should not overlap, as behavior is undefined.
+*/
 
 #include "libft.h"
 

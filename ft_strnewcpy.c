@@ -6,13 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 12:14:53 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/08 13:23:12 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 16:18:15 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Makes a copy of a string which is independently modifiable from the
-** original one.
+** original one using malloc.
 */
 
 #include "libft.h"

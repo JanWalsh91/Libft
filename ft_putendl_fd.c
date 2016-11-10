@@ -6,9 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 14:15:28 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 15:42:00 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:20:30 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Writes the string s to the file descriptor fd followed by a newline.
+*/
 
 #include "libft.h"
 

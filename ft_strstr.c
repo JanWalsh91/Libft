@@ -6,9 +6,14 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:56:38 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 17:07:57 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 16:26:50 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Locates the first occurence of the null-terminated string little in the
+** null-terminated string big.
+*/
 
 #include "libft.h"
 

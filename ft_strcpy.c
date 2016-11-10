@@ -6,9 +6,14 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:22:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/08 16:08:23 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:31:17 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Copies the string src to dst, including the null-terminating character.
+** src and dst should not overlap, as behavior is undefined.
+*/
 
 #include "libft.h"
 

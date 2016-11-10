@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 17:16:41 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 17:09:28 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 16:25:34 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char				**ft_strsplit(char const *s, char c)
 	word_count = get_word_count((char *)s, c);
 	if (!s || !c)
 		return (NULL);
-	if (!(result = (char**)ft_memalloc(sizeof(char*) * (word_count + 1))))
+	if (!(result = (char **)ft_memalloc(sizeof(char *) * (word_count + 1))))
 		return (NULL);
 	result[word_count + 1] = "\0";
 	i = 0;
@@ -71,7 +71,7 @@ char				**ft_strsplit(char const *s, char c)
 		word_length = get_word_length((char *)s + i, c);
 		if (!(result[j++] = ft_strsub(s + i, 0, word_length)))
 			return (NULL);
-		s = s + word_length;
+		s += word_length;
 		word_count--;
 	}
 	return (result);

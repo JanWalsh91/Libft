@@ -6,13 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 14:48:44 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 18:27:47 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:37:55 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Lexicographically compares s1 and s2.
-** If they are equal, returns 1. Otherwise returns 0.
+** Lexicographically (by ASCII table) compares s1 and s2.
+** If they are equal, returns 1. Otherwise, returns 0.
 */
 
 #include "libft.h"

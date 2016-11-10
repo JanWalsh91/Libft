@@ -6,9 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 14:07:35 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/06 14:08:27 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:21:10 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Writes the int nb to the standard output.
+*/
 
 #include "libft.h"
 

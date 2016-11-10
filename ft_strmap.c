@@ -6,13 +6,13 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 17:44:03 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/09 18:12:59 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/10 15:43:21 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Applies the function f to each character in the string s to create a new
-** string with the resturn values of f.
+** string with the return values of f.
 ** Returns the new string.
 */
 
