@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_ispunct.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 16:27:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/01 17:51:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/12/01 11:33:09 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/12/01 11:39:13 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Travereses lst and applies f to each link.
+** UNTESTED
+** Returns 1 if c is punctuation, 0 if not.
 */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+int	ft_ispunct(int c)
 {
-	t_list	*p;
-
-	if (!lst)
-		return ;
-	p = lst;
-	while (p != NULL)
-	{
-		f(p);
-		p = p->next;
-	}
+	return ((33 <= c && c <= 47) ||
+			(58 <= c && c <= 64) ||
+			(91 <= c && c <= 96) ||
+			(123 <= c && c <= 126));
 }

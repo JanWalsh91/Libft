@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 16:27:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/01 17:51:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/12/01 10:51:34 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/12/01 11:28:12 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Travereses lst and applies f to each link.
+** UNTESTED
+** Returns n to the power of p.
 */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+long	ft_power(int n, int p)
 {
-	t_list	*p;
+	long n1;
 
-	if (!lst)
-		return ;
-	p = lst;
-	while (p != NULL)
+	n1 = n;
+	if (!p || !n || p < 0)
+		return (0);
+	if (p == 0)
+		return (1);
+	while (p != 1)
 	{
-		f(p);
-		p = p->next;
+		n1 *= n;
+		p--;
 	}
+	return (n1);
 }

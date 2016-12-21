@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_to_base.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 16:27:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/01 17:51:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/12/01 11:09:15 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/12/01 11:31:56 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Travereses lst and applies f to each link.
+** UNTESTED
 */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+char	*ft_to_base(int n, int b)
 {
-	t_list	*p;
+	int		t;
+	char	*result;
 
-	if (!lst)
-		return ;
-	p = lst;
-	while (p != NULL)
+	result = ft_strnew(1);
+	if (b < 2)
+		return (0);
+	t = n;
+	while (t != 0)
 	{
-		f(p);
-		p = p->next;
+		result = ft_straddcharfree(result, ((n % b) + '0'));
+		n = n / b;
 	}
+	return(ft_strrev(result));
 }

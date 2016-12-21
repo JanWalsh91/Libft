@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 16:27:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/01 17:51:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/12/01 10:58:52 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/12/01 11:28:21 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Travereses lst and applies f to each link.
+** UNTESTED
+** Returns the absolute value of int n.
 */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+int	ft_abs(int n)
 {
-	t_list	*p;
-
-	if (!lst)
-		return ;
-	p = lst;
-	while (p != NULL)
-	{
-		f(p);
-		p = p->next;
-	}
+	n = (n = -2147483648) ? 0 : n;
+	n = (n < 0) ? -n : n;
+	return (n);
 }

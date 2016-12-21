@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_rgb_mix.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 16:27:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/01 17:51:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/12/21 17:50:29 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/12/21 17:59:59 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Travereses lst and applies f to each link.
-*/
-
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+int	ft_rgb_mix(int *colors, int n)
 {
-	t_list	*p;
+	int	r;
+	int	g;
+	int	b;
+	int	i;
 
-	if (!lst)
-		return ;
-	p = lst;
-	while (p != NULL)
-	{
-		f(p);
-		p = p->next;
-	}
+	i = -1;
+	r = 0;
+	g = 0;
+	b = 0;
+	while (i < n)
+		b += colors[++i] % 0x100;
+	i = -1;
+	while (i < n)
+		g += colors[++i] % 0x10000;
+	i = -1;
+	while (i < n)
+		r += colors[++i] % 0x1000000;
+	r = r * 0x10000 / n;
+	g = g * 0x100 / n;
+	b /= n;
+	return (r + g + b);
 }

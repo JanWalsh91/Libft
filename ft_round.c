@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   round.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 16:27:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/01 17:51:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/12/12 18:44:47 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/12/21 18:02:56 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Travereses lst and applies f to each link.
+** Rounds a float to the nearest integer.
 */
 
-#include "libft.h"
-
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+int	ft_round(float i)
 {
-	t_list	*p;
+	int	a;
+	int	b;
 
-	if (!lst)
-		return ;
-	p = lst;
-	while (p != NULL)
-	{
-		f(p);
-		p = p->next;
-	}
+	a = (int)i;
+	b = (int)(i + 0.5);
+	return ((a == b) ? a : b);
 }
