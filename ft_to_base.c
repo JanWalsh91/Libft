@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 11:09:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/01 11:31:56 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/12/27 14:52:15 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ char	*ft_to_base(int n, int b)
 		result = ft_straddcharfree(result, ((n % b) + '0'));
 		n = n / b;
 	}
-	return(ft_strrev(result));
+	return (ft_strrev(result));
 }

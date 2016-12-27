@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 15:57:42 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/30 13:08:13 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/12/27 14:52:34 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 static int	read_file(t_list *p, char **line);
 static int	read_buf(t_list *p, char **line);
 
-int	get_next_line(const int fd, char **line)
+int			get_next_line(const int fd, char **line)
 {
 	t_list			*p;
 	static t_list	*lst;
