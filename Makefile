@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2016/12/21 18:15:12 by jwalsh           ###   ########.fr        #
+#    Updated: 2016/12/27 15:02:25 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,9 +81,7 @@ SRC = ft_memset.c \
 	ft_straddchar.c \
 	ft_straddcharfree.c \
 	ft_to_base.c \
-	ft_error.c \
-	ft_round.c \
-	ft_rgb_mix.c
+	ft_error.c
 
 NAME = libft.a
 
