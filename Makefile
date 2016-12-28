@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2016/12/27 15:02:25 by jwalsh           ###   ########.fr        #
+#    Updated: 2016/12/28 11:53:34 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -112,11 +112,6 @@ $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@$(ECHO) "$(C_CYAN)Libft compilation done.$(C_NONE)"
-
-$(OBJ_NAME): libft.h
-
-compile_msg:
-	@$(ECHO) "$(C_CYAN)Compiling Libft . . .$(C_NONE)"
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@ -I ./libft.h
