@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/30 18:45:02 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/03 13:00:05 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
+int				ft_isspace(char c);
 int				ft_isprint(int c);
 int				ft_ispunct(int c);
 int				ft_toupper(int c);
