@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/03 11:07:36 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/03 11:07:42 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/03 11:16:29 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_straddcharfree(char const *s, char c)
 
 	if (!c || !ft_isprint(c))
 		return ((char *)s);
-	length = (s) ? ft_strlen((char *)s + 2) : 2;
+	length = (s) ? ft_strlen((char *)s) + 2 : 2;
 	if (!(newstr = ft_memalloc(sizeof(char) * length)))
 		return (NULL);
 	i = 0;
