@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:45:07 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/05 15:56:46 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/04 17:18:09 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/05 16:45:06 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Computes and returns the length of the string.
-** Excludes the null terminating character.
+** Allocates memory for and returns a wide character string of size size,
+** with all characters initilized at \0.
+** Returns NULL if allocation fails.
 */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+wchar_t	*ft_wstrnew(size_t size)
 {
-	size_t	i;
+	wchar_t	*str;
 
-	i = 0;
-	while (s[i])
-		++i;
-	return (i);
+	if (!(str = ft_memalloc(size + 1)))
+		return (NULL);
+	ft_bzero(str, size);
+	return (str);
 }

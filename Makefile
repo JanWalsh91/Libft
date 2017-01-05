@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/01/03 12:59:45 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/01/05 17:11:19 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,16 @@ SRC = ft_memset.c \
 	ft_error.c \
 	ft_itoa_base.c \
 	ft_strtolower.c \
-	ft_strtoupper.c
+	ft_strtoupper.c \
+	ft_wstrlen.c \
+	ft_strsjoin.c \
+	ft_strappend.c \
+	ft_wstrappend.c \
+	ft_wstrnew.c \
+	ft_wstrsjoin.c \
+	ft_strsjoinfree.c \
+	ft_strappendfree.c \
+	ft_wstrappendfree.c
 
 NAME = libft.a
 

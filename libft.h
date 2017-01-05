@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/03 13:00:05 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/05 17:14:06 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 # define BUFF_SIZE 32
 
 typedef struct	s_list
@@ -100,5 +101,15 @@ int				ft_error(char *error_msg);
 char			*ft_itoa_base(int value, int base);
 void			ft_strtolower(char *s);
 void			ft_strtoupper(char *s);
+size_t			ft_wstrlen(const wchar_t *s);
+char			*ft_strsjoin(size_t n, ...);
+char			*ft_strappend(char *dst, char *src, size_t length);
+wchar_t			*ft_wstrappend(wchar_t *dst, wchar_t *src, size_t size);
+wchar_t			*ft_wstrnew(size_t size);
+wchar_t			*ft_wstrsjoin(size_t n, ...);
+char			*ft_strappendfree(char *dst, char *src, size_t size);
+char			*ft_strsjoinfree(size_t n, ...);
+wchar_t			*ft_wstrappendfree(wchar_t *dst, wchar_t *src, size_t size);
+wchar_t			*ft_wstrsjoinfree(size_t n, ...);
 
 #endif

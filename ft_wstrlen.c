@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_wstrlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:45:07 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/05 15:56:46 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/01/05 15:54:43 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/05 15:58:36 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Computes and returns the length of the string.
-** Excludes the null terminating character.
+** Computes and returns the length of a wide character string.
+** Excludes the null temrinating character.
 */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_wstrlen(const wchar_t *s)
 {
 	size_t	i;
 
