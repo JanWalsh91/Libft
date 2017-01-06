@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putwstr_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:18:58 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/06 15:21:28 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/01/06 14:51:12 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/06 14:54:47 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Writes n \0 to the string s.
-** If n is 0, ft_bzero does nothing.
+** Writes the wide char string s to the file descriptor fd.
+** Returns 0 if an invalid wide char is detected.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int		ft_putwstr_fd(wchar_t const *s, int fd)
 {
-	if (n > 0)
-		ft_memset(s, 0, n);
+	while (s && *s)
+		if (!(ft_putwchar_fd(*s, fd)))
+			return (0);
+	return (1);
 }

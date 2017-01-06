@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/06 13:58:58 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/06 15:42:43 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,9 @@ wchar_t			*ft_wstrappendfree(wchar_t *dst, wchar_t *src, size_t size);
 wchar_t			*ft_wstrsjoinfree(size_t n, ...);
 int				ft_putwchar(wchar_t c);
 int				ft_putwchar_fd(wchar_t c, int fd);
+int				ft_putwstr_fd(wchar_t const *s, int fd);
+int				ft_putwstr(wchar_t const *s);
+unsigned char	*ft_ustrnew(size_t size);
+unsigned char	*ft_wctostr(wchar_t c);
 
 #endif

@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:18:58 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/06 15:21:28 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/11/06 14:01:33 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/06 15:00:38 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Writes n \0 to the string s.
-** If n is 0, ft_bzero does nothing.
+** Writes the wide character string s to the standard output.
+** Returns 0 if an invalid wide character is detected.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int		ft_putwstr(wchar_t const *s)
 {
-	if (n > 0)
-		ft_memset(s, 0, n);
+	while (s && *s)
+		if (!(ft_putwchar(*s)))
+			return (0);
+	return (1);
 }

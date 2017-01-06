@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_ustrnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 16:18:58 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/06 15:21:28 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/01/06 15:17:40 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/06 15:23:39 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Writes n \0 to the string s.
-** If n is 0, ft_bzero does nothing.
+** Allocates memory for and returns a unsigned char string of size size,
+** with all characters initilized at \0.
+** Returns NULL if allocation fails.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+unsigned char	*ft_ustrnew(size_t size)
 {
-	if (n > 0)
-		ft_memset(s, 0, n);
+	unsigned char	*str;
+
+	if (!(str = ft_memalloc(size + 1)))
+		return (NULL);
+	return (str);
 }
