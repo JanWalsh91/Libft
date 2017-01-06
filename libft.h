@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/06 15:42:43 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/06 16:04:58 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,8 @@ int				ft_putwstr_fd(wchar_t const *s, int fd);
 int				ft_putwstr(wchar_t const *s);
 unsigned char	*ft_ustrnew(size_t size);
 unsigned char	*ft_wctostr(wchar_t c);
+unsigned char	*ft_ustrjoin(unsigned char const *s1, unsigned char const *s2);
+unsigned char	*ft_ustrjoinfree(unsigned char const *s1,
+		unsigned char const *s2, char c);
 
 #endif
