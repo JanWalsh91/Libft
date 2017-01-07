@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/07 11:50:45 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/07 13:15:37 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/07 15:26:45 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -25,7 +25,7 @@ unsigned char	*ft_ustrappendfree(unsigned char *dst, unsigned char *src,
 
 	length = (dst && *dst) ? ft_strlen((char *)dst) : 0;
 	if (length >= size)
-		return (0);
+		return (dst);
 	while (length <= size && dst && src && *src)
 		dst[length++] = *(src++);
 	dst[length] = '\0';
