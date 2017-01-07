@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/06 17:34:55 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/07 11:53:45 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,11 @@ unsigned char	*ft_ustrjoinfree(unsigned char const *s1,
 		unsigned char const *s2, char c);
 unsigned char	*ft_ustrncat(unsigned char *s1, unsigned char *s2, int nb);
 unsigned char	*ft_wstrtostr(unsigned char *s);
+unsigned char	*ft_ustrappend(unsigned char *dst, unsigned char *src,
+		size_t size);
+unsigned char	*ft_ustrsjoin(size_t n, ...);
+unsigned char	*ft_ustrappendfree(unsigned char *dst, unsigned char *src,
+		size_t size);
+unsigned char	*ft_ustrsjoinfree(size_t n, ...);
 
 #endif
