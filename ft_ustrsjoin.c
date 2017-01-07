@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/07 11:40:38 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/07 11:53:25 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/07 12:37:11 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,18 @@ unsigned char	*ft_ustrsjoin(size_t n, ...)
 	i = -1;
 	length = 0;
 	while (++i < n)
-		length += ft_strlen((char *)va_arg(cp, unsigned char *));
+	{
+		result = va_arg(cp, unsigned char *);
+		if (result && *result)
+			length += ft_strlen((char *)result);	
+	}
+	result = NULL;
 	if (!(result = ft_ustrnew(length)))
 		return (NULL);
 	i = -1;
 	while (++i < n)
 		result = ft_ustrappend(result, va_arg(ap, unsigned char *), length);
 	return (result);
+	va_end(ap);
+	va_end(cp);
 }
