@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 16:47:28 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/05 16:47:32 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/07 14:58:20 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ wchar_t	*ft_wstrsjoin(size_t n, ...)
 	i = -1;
 	while (++i < n)
 		result = ft_wstrappend(result, va_arg(ap, wchar_t *), length);
+	va_end(ap);
+	va_end(cp);
 	return (result);
 }
