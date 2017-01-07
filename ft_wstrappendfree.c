@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 17:10:35 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/05 17:12:12 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/07 13:04:15 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ wchar_t	*ft_wstrappendfree(wchar_t *dst, wchar_t *src, size_t size)
 {
 	size_t	length;
 
-	length = ft_wstrlen(dst);
+	length = (dst && *dst) ? ft_wstrlen(dst) : 0;
 	if (length >= size)
 		return (0);
 	while (length <= size && *src)
