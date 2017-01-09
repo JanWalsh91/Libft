@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/07 13:35:54 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/09 14:31:43 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,8 @@ char			*ft_straddchar(char const *s, char c);
 char			*ft_straddcharfree(char const *s, char c);
 char			*ft_to_base(int n, int b);
 int				ft_error(char *error_msg);
-char			*ft_itoa_base(int value, int base);
+char			*ft_itoa_base(long value, int base);
+char			*ft_uitoa_base(unsigned long value, int base);
 void			ft_strtolower(char *s);
 void			ft_strtoupper(char *s);
 size_t			ft_wstrlen(const wchar_t *s);

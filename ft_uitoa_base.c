@@ -1,46 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_uitoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/29 17:59:29 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/09 14:29:49 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/01/09 14:29:54 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/09 14:32:16 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft.h"
 
 /*
-** Converts long integer value into an array in base base.
+** Converts unsigned long integer value into an array in base base.
 */
 
-char	*ft_itoa_base(long value, int base)
+char	*ft_uitoa_base(unsigned long value, int base)
 {
-	char	*result;
-	int		i;
-	int		sign;
-	long	n;
+	char			*result;
+	int				i;
+	unsigned long	n;
 
 	if (base < 2)
 		return (0);
-	if (value == -2147483648)
-		return ("-2147483648");
-	n = (value < 0 ) ? -value : value;
-	sign = (value < 0) ? -1 : 0;
-	i = (sign == -1) ? 2 : 1;
+	n = value;
+	i = 1;
 	while ((n /= base) >= 1)
 		i++;
 	if (!(result = (char *)malloc(i + 1)))
 		return (NULL);
 	result[i] = '\0';
-	n = (value < 0) ? -value : value;
-	while (i-- + sign)
+	n = value;
+	while (i--)
 	{
 		result[i] = (n % base) < 10 ? n % base + '0' : n % base + 'A' - 10;
 		n /= base;
 	}
-	(i == 0) ? result[i] = '-' : 0;
 	return (result);
 }
