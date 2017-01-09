@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/09 15:57:02 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/09 15:57:05 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/09 16:25:57 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ unsigned char	*ft_ustrdup(unsigned char *src)
 {
 	unsigned char	*new;
 
+	if (!src)
+		return (NULL);
 	if (!(new = (unsigned char*)malloc(ft_strlen((char *)src) + 1)))
 		return (NULL);
 	return (ft_ustrcpy(new, src));
