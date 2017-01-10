@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/09 14:29:54 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/10 15:47:31 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/10 16:00:49 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 ** Converts unsigned long integer value into an array in base base.
 */
 
-char	*ft_uitoa_base(unsigned long value, int base)
+char	*ft_uitoa_base(uintmax_t value, int base)
 {
 	char			*result;
 	int				i;
-	unsigned long	n;
+	uintmax_t		n;
 
 	if (base < 2)
 		return (0);
