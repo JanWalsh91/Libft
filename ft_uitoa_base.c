@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/09 14:29:54 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/10 16:00:49 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/10 16:04:43 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ char	*ft_uitoa_base(uintmax_t value, int base)
 
 	if (base < 2)
 		return (0);
-	if (value == 4294967295)
-		return (ft_strdup("4294967295"));
 	n = value;
 	i = 1;
 	while ((n /= base) >= 1)
