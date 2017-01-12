@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/09 17:34:05 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/12 14:05:44 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,5 +134,6 @@ unsigned char	*ft_ustrncpy(unsigned char *dst, const unsigned char *src,
 unsigned char	*ft_ustrcpy(unsigned char *dst, const unsigned char *src);
 unsigned char	*ft_ustrdup(unsigned char *src);
 void			ft_swap(int *a, int *b);
+size_t			ft_ustrlen(const unsigned char *s);
 
 #endif

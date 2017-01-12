@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/01/09 17:33:13 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/01/12 14:05:12 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,7 +114,8 @@ SRC = ft_memset.c \
 	ft_ustrncpy.c \
 	ft_ustrcpy.c \
 	ft_ustrdup.c \
-	ft_swap.c
+	ft_swap.c \
+	ft_ustrlen.c
 
 NAME = libft.a
 
