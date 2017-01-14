@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdupfree.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/05 15:53:28 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/14 16:55:27 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/01/14 18:24:49 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/14 18:27:10 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Copies at most len characters from src into dst.
-** If src is less than len characters long, the remainder of dst is filled
-** with \0. Otherwise, dst is not terminated.
-*/
-
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
-{
-	size_t	i;
+/*
+** Frees a char pointer and creates a new string from src with ft_strdup
+** and assignes dst to the result.
+*/
 
-	i = 0;
-	while (src[i] && (i < len))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < len)
-		dst[i++] = '\0';
+char	*ft_strdupfree(char *dst, char *src)
+{
+	dst ? free(dst) : 0;
+	dst = ft_strdup(src);
 	return (dst);
 }

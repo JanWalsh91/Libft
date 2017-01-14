@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_dtoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 11:50:25 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/13 17:56:45 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/01/13 17:30:21 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/13 19:04:40 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Allocates and returns a null-terminated character string representing the
-** integer n. Negative numbers are also considered.
-** If memory allocation fails, return NULL.
-*/
-
 #include "libft.h"
+#include "stdio.h"
 
-char	*ft_itoa(int n)
+char	*ft_dtoa(double n)
 {
 	char	*str;
-	long	nb;
+	double	nb;
 	int		count;
+	int		i;
+	char	*integral;
 
-	nb = n;
-	count = (nb <= 0) ? 1 : 0;
+	integral = ft_itoa((int)n);
+	n < 0 ? n = -n : 0;
+	nb = n - (int)n;
+	count = 1;
 	while (n && ++count)
-		n /= 10;
-	if (!(str = (char *)malloc(sizeof(char) * count + 1)))
-		return (NULL);
-	str[0] = (nb < 0) ? '-' : '0';
-	nb = (nb < 0) ? -nb : nb;
-	str[count] = '\0';
-	while (nb)
 	{
-		str[--count] = (nb % 10) + '0';
-		nb /= 10;
+		n = (n * 10) - (float)(int)(n * 10);
+		printf("%f\n", n);
 	}
-	return (str);
+	printf("count: %i\n", count);
+	if (!(str = ft_strnew(count)))
+		return (NULL);
+	i = 1;
+	i != count ? str[0] = '.' : 0;
+	while (i != count)
+		str[i++] = (int)(nb *= 10) + '0';
+	return (ft_strjoinfree(integral, str, 'b'));
 }
