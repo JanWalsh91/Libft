@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/06 15:09:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/15 15:07:07 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/15 17:53:37 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ unsigned char			*ft_wctostr(wchar_t c)
 {
 	if (c <= 0x7F)
 		return (get_1_byte(c));
-	else if (c <= 0x7FF)
+	else if (0x7F < c && c <= 0x7FF)
 		return (get_2_bytes(c));
-	else if (c <= 0xFFFF)
+	else if ((0x7FF < c && c <= 0xD7FF) || (0xE000 <= c && c <= 0xFFFF))
 		return (get_3_bytes(c));
-	else if (c <= 0x10FFFF)
+	else if (0xFFFF < c && c <= 0x10FFFF)
 		return (get_4_bytes(c));
 	return (0);
 }
@@ -68,6 +68,12 @@ static unsigned char	*get_3_bytes(wchar_t c)
 	s[1] = ((c >> 6) & 0x3F) + 0x80;
 	s[2] = (c & 0x3F) + 0x80;
 	s[3] = '\0';
+	if (0x800 <= c && c <= 0xFFF)
+		if (!(0xA0 <= s[1] && s[1] <= 0xBF))
+		{
+			free(s);
+			return (NULL);
+		}
 	return (s);
 }
 
@@ -82,5 +88,17 @@ static unsigned char	*get_4_bytes(wchar_t c)
 	s[2] = ((c >> 6) & 0x3F) + 0x80;
 	s[3] = (c & 0x3F) + 0x80;
 	s[4] = '\0';
+	if (0x10000 <= c && c <= 0x3FFFF)
+		if (!(0x90 <= s[1] && s[1] <= 0xBF))
+		{
+			free(s);
+			return (NULL);
+		}
+	if (0x100000 <= c && c <= 0x10FFFF)
+		if (!(0x80 <= s[1] && s[1] <= 0x8F))
+		{
+			free(s);
+			return (NULL);
+		}
 	return (s);
 }
