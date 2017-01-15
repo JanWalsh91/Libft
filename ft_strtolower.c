@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/30 18:34:54 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/06 17:34:35 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/15 14:45:32 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_strtolower(char *s)
 
 	i = -1;
 	while (s && s[++i])
-		ft_isupper(s[i]) ? s[i] = ft_tolower(s[i]): 0;
+		ft_isupper(s[i]) ? s[i] = ft_tolower(s[i]) : 0;
 }

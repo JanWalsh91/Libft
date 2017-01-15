@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/29 17:59:29 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/10 15:42:16 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/15 14:42:35 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ char	*ft_itoa_base(long value, int base)
 
 	if (base < 2)
 		return (0);
-	if (value == - 9223372036854775807 - 1)
+	if (value == -9223372036854775807 - 1)
 		return (ft_strdup("-9223372036854775808"));
-	n = (value < 0 ) ? -value : value;
+	n = (value < 0) ? -value : value;
 	sign = (value < 0) ? -1 : 0;
 	i = (sign == -1) ? 2 : 1;
 	while ((n /= base) >= 1)

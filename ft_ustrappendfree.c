@@ -6,9 +6,10 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/07 11:50:45 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/10 14:21:43 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/15 14:46:08 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /*
 ** Appends an unsigned char string src to unsigned char string dst until dst
 ** reaches size number of chars, excluding the \0.

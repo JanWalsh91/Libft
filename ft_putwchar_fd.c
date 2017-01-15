@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 17:23:50 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/06 14:01:24 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/15 14:45:07 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ static int	write_2_bytes(wchar_t c, int fd)
 	write(fd, &c, 2);
 	return (1);
 }
+
 static int	write_3_bytes(wchar_t c, int fd)
 {
 	char s[3];
@@ -60,6 +61,7 @@ static int	write_3_bytes(wchar_t c, int fd)
 	write(fd, &c, 3);
 	return (1);
 }
+
 static int	write_4_bytes(wchar_t c, int fd)
 {
 	char s[4];
@@ -67,7 +69,7 @@ static int	write_4_bytes(wchar_t c, int fd)
 	s[0] = ((c >> 18) & 0x7) + 0xF0;
 	s[1] = ((c >> 12) & 0x3F) + 0x80;
 	s[2] = ((c >> 6) & 0x3F) + 0x80;
-	s[3] = (c & 0x3F) + 0x80;;
+	s[3] = (c & 0x3F) + 0x80;
 	write(fd, &c, 4);
 	return (1);
 }
