@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/06 15:09:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/14 19:22:04 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/15 15:07:07 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ static unsigned char	*get_2_bytes(wchar_t c)
 	s[2] = '\0';
 	return (s);
 }
+
 static unsigned char	*get_3_bytes(wchar_t c)
 {
 	unsigned char	*s;
@@ -69,6 +70,7 @@ static unsigned char	*get_3_bytes(wchar_t c)
 	s[3] = '\0';
 	return (s);
 }
+
 static unsigned char	*get_4_bytes(wchar_t c)
 {
 	unsigned char	*s;
