@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/06 16:03:07 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/12 15:22:42 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/16 12:16:18 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ unsigned char	*ft_ustrjoinfree(unsigned char const *s1,
 
 	newstr = ft_ustrjoin(s1, s2);
 	if (c == 'l' || c == 'b')
-		free((unsigned char *)s1);
+		s1 ? free((unsigned char *)s1) : 0;
 	if (c == 'r' || c == 'b')
-		free((unsigned char *)s2);
+		s2 ? free((unsigned char *)s2) : 0;
 	return (newstr);
 }
