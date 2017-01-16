@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/06 15:09:26 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/16 12:15:35 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/16 12:36:03 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static unsigned char	*get_1_byte(wchar_t c)
 {
 	unsigned char	*s;
 
-	if (!(s = ft_ustrnew(2)))
+	if (!(s = ft_ustrnew(1)))
 		return (NULL);
 	s[0] = c;
 	s[1] = '\0';
@@ -50,7 +50,7 @@ static unsigned char	*get_2_bytes(wchar_t c)
 {
 	unsigned char	*s;
 
-	if (!(s = ft_ustrnew(3)))
+	if (!(s = ft_ustrnew(2)))
 		return (NULL);
 	s[0] = ((c >> 6) & 0x1F) + 0xC0;
 	s[1] = (c & 0x3F) + 0x80;
@@ -62,7 +62,7 @@ static unsigned char	*get_3_bytes(wchar_t c)
 {
 	unsigned char	*s;
 
-	if (!(s = ft_ustrnew(4)))
+	if (!(s = ft_ustrnew(3)))
 		return (NULL);
 	s[0] = ((c >> 12) & 0xF) + 0xE0;
 	s[1] = ((c >> 6) & 0x3F) + 0x80;
@@ -81,7 +81,7 @@ static unsigned char	*get_4_bytes(wchar_t c)
 {
 	unsigned char	*s;
 
-	if (!(s = ft_ustrnew(5)))
+	if (!(s = ft_ustrnew(4)))
 		return (NULL);
 	s[0] = ((c >> 18) & 0x7) + 0xF0;
 	s[1] = ((c >> 12) & 0x3F) + 0x80;
