@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/06 15:57:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/12 15:29:37 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/16 13:02:29 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ unsigned char	*ft_ustrjoin(unsigned char const *s1, unsigned char const *s2)
 	size_t			i;
 	size_t			j;
 
-	if (!s1)
-		return ((unsigned char *)s2);
-	if (!s2)
-		return ((unsigned char *)s1);
+	newstr = NULL;
+	if (!s1 || !*s1)
+		return (ft_ustrdupfree(newstr, (unsigned char *)s2));
+	if (!s2 || !*s2)
+		return (ft_ustrdupfree(newstr, (unsigned char *)s1));
 	length = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
 	if (!(newstr = ft_memalloc(sizeof(unsigned char) * length)))
 		return (NULL);

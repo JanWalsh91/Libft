@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_ustrdupfree.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 17:08:33 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/16 12:56:39 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/01/16 12:59:23 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/16 13:01:23 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Using malloc, allocates memory of size size and returns a pointer to it.
-** The allocated memory is initialized at 0.
-*/
-
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
-{
-	void	*p;
+/*
+** Frees a char pointer and creates a new string from src with ft_strdup
+** and assignes dst to the result.
+*/
 
-	if (!(p = malloc(size)))
-		return (NULL);
-	return (ft_memset(p, 0, size));
+unsigned char	*ft_ustrdupfree(unsigned char *dst, unsigned char *src)
+{
+	dst ? free(dst) : 0;
+	dst = ft_ustrdup(src);
+	return (dst);
 }
