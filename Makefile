@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/01/21 15:43:51 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/01/21 15:45:49 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,8 +77,6 @@ SRC = ft_memset.c \
 	ft_clamp.c \
 	get_next_line.c \
 	ft_range.c \
-	ft_power.c \
-	ft_abs.c \
 	ft_straddchar.c \
 	ft_straddcharfree.c \
 	ft_error.c \
