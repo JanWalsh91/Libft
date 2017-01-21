@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/21 15:11:59 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/21 15:42:47 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,6 @@ int				get_next_line(const int fd, char **line);
 int				*ft_range(int start, int end);
 char			*ft_straddchar(char const *s, char c);
 char			*ft_straddcharfree(char const *s, char c);
-char			*ft_to_base(int n, int b);
 int				ft_error(char *error_msg);
 char			*ft_itoa_base(long value, int base);
 char			*ft_uitoa_base(unsigned long value, int base);

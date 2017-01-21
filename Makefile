@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/01/21 15:12:15 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/01/21 15:43:51 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,6 @@ SRC = ft_memset.c \
 	ft_abs.c \
 	ft_straddchar.c \
 	ft_straddcharfree.c \
-	ft_to_base.c \
 	ft_error.c \
 	ft_itoa_base.c \
 	ft_uitoa_base.c \
