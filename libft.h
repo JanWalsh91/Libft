@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/21 15:52:17 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/23 11:44:28 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,5 +134,6 @@ void			ft_swap(int *a, int *b);
 size_t			ft_ustrlen(const unsigned char *s);
 char			*ft_strdupfree(char *dst, char *src);
 unsigned char	*ft_ustrdupfree(unsigned char *dst, unsigned char *src);
+void			ft_error_exit(char *error_msg);
 
 #endif
