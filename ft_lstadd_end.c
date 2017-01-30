@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_end.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 16:23:42 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/30 12:28:18 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/01/30 12:25:17 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/01/30 12:28:10 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Adds a new element to the front of the list.
-*/
-
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *n)
+/*
+** Adds an elements to the end of a list.
+*/
+
+void	ft_lstadd_end(t_list **alist, t_list *n)
 {
 	if (n)
 	{
-		n->next = *alst;
-		*alst = n;
+		if (!*alist)
+			*alist = n;
+		else
+		{
+			while ((*alist)->next)
+				*alist = (*alist)->next;
+			(*alist)->next = n;
+		}
 	}
 }

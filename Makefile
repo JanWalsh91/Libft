@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/01/29 15:50:33 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/01/30 12:28:34 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ SRC = ft_memset.c \
 	ft_lstdelone.c \
 	ft_lstdel.c \
 	ft_lstadd.c \
+	ft_lstadd_end.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_islower.c \
