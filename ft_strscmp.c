@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_end.c                                    :+:      :+:    :+:   */
+/*   ft_strscmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/30 12:25:17 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/30 12:29:52 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/01 15:19:20 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/01 15:22:59 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 /*
-** Adds an elements to the end of a list.
+** Compares string s1 with all the strings in the NULL-terminated array of
+** strings. Returns 0 if a match is found, of returns the result of strcmp
+** with the different string.
 */
 
-void	ft_lstadd_end(t_list **alist, t_list *n)
+#include "libft.h"
+
+int	ft_strscmp(const char *s1, const char **s)
 {
-	if (n)
+	int	i;
+	int	ret;
+
+	i = -1;
+	while (s[++i])
 	{
-		if (!*alist)
-			*alist = n;
-		else
-		{
-			while ((*alist)->next)
-				*alist = (*alist)->next;
-			(*alist)->next = n;
-		}
+		if ((ret = ft_strcmp(s1, s[i])))
+			return (ret);
 	}
+	return (0);
 }
