@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_end.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 12:25:17 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/30 12:29:52 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/02 11:46:32 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,18 @@
 
 void	ft_lstadd_end(t_list **alist, t_list *n)
 {
+	t_list	*l_ptr;
+
+	l_ptr = *alist;
 	if (n)
 	{
 		if (!*alist)
 			*alist = n;
 		else
 		{
-			while ((*alist)->next)
-				*alist = (*alist)->next;
-			(*alist)->next = n;
+			while (l_ptr->next)
+				l_ptr = l_ptr->next;
+			l_ptr->next = n;
 		}
 	}
 }
