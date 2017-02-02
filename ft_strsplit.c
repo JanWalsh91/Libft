@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 17:16:41 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/14 18:24:23 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/02 13:12:40 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (!s || !c)
 		return (NULL);
+	
 	word_count = get_word_count((char*)s, c);
 	if (!(result = (char **)ft_memalloc(sizeof(char *) * (word_count + 1))))
 		return (NULL);
@@ -55,9 +56,9 @@ char			**ft_strsplit(char const *s, char c)
 	while (s && word_count)
 	{
 		i = 0;
-		while (s && *s == c)
+		while (*s && *s == c)
 			s++;
-		while (s && *s != c && ++i)
+		while (*s && *s != c && ++i)
 			s++;
 		if (!(result[j++] = ft_strsub(s - i, 0, i)))
 			return (NULL);
