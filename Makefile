@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/01 15:23:49 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/06 15:06:03 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,7 +119,8 @@ SRC = ft_memset.c \
 	ft_error_exit.c \
 	ft_strcmp_percent.c \
 	ft_display_usage_exit.c \
-	ft_strscmp.c
+	ft_strscmp.c \
+	ft_charcount.c
 
 NAME = libft.a
 

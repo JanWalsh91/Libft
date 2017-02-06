@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/01 15:23:34 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/06 15:06:27 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,5 +139,6 @@ void			ft_error_exit(char *error_msg);
 int				ft_strcmp_percent(char *src, char *cmp, float percent);
 void			ft_display_usage_exit(char *usage);
 int				ft_strscmp(const char *s1, const char **s);
+int				ft_charcount(char *s, char c);
 
 #endif
