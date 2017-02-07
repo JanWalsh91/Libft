@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/29 12:23:52 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/07 14:09:58 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/07 14:11:18 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 # define ANSI_GREEN "\e[32m"
 # define ANSI_BLUE "\e[38;5;20m"
 # define ANSI_MAGENTA "\e[35m"
-# define CYAN "\e[38;5;51m"
-# define YELLOW "\e[38;5;226m"
-# define PINK "\e[38;5;13m"
-# define ORANGE "\e[38;5;202m"
-# define BLACK "\e[38;5;0m"
+# define ANSI_CYAN "\e[38;5;51m"
+# define ANSI_YELLOW "\e[38;5;226m"
+# define ANSI_PINK "\e[38;5;13m"
+# define ANSI_ORANGE "\e[38;5;202m"
+# define ANSI_BLACK "\e[38;5;0m"
 
 # include "libft.h"
 # include <wchar.h>

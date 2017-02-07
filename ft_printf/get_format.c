@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_format.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 15:39:05 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/17 14:04:07 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/07 14:11:19 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,15 +79,15 @@ static int	get_code_values(char *c)
 		c = ft_strdupfree(c, "\e[3m") : 0;
 	!ft_strcmp(c, "underline") || !ft_strcmp(c, "u")
 		? c = ft_strdupfree(c, "\e[4m") : 0;
-	!ft_strcmp(c, "red") ? c = ft_strdupfree(c, RED) : 0;
-	!ft_strcmp(c, "green") ? c = ft_strdupfree(c, GREEN) : 0;
-	!ft_strcmp(c, "blue") ? c = ft_strdupfree(c, BLUE) : 0;
-	!ft_strcmp(c, "magenta") ? c = ft_strdupfree(c, MAGENTA) : 0;
-	!ft_strcmp(c, "cyan") ? c = ft_strdupfree(c, CYAN) : 0;
-	!ft_strcmp(c, "yellow") ? c = ft_strdupfree(c, YELLOW) : 0;
-	!ft_strcmp(c, "pink") ? c = ft_strdupfree(c, PINK) : 0;
-	!ft_strcmp(c, "orange") ? c = ft_strdupfree(c, ORANGE) : 0;
-	!ft_strcmp(c, "black") ? c = ft_strdupfree(c, BLACK) : 0;
+	!ft_strcmp(c, "red") ? c = ft_strdupfree(c, ANSI_RED) : 0;
+	!ft_strcmp(c, "green") ? c = ft_strdupfree(c, ANSI_GREEN) : 0;
+	!ft_strcmp(c, "blue") ? c = ft_strdupfree(c, ANSI_BLUE) : 0;
+	!ft_strcmp(c, "magenta") ? c = ft_strdupfree(c, ANSI_MAGENTA) : 0;
+	!ft_strcmp(c, "cyan") ? c = ft_strdupfree(c, ANSI_CYAN) : 0;
+	!ft_strcmp(c, "yellow") ? c = ft_strdupfree(c, ANSI_YELLOW) : 0;
+	!ft_strcmp(c, "pink") ? c = ft_strdupfree(c, ANSI_PINK) : 0;
+	!ft_strcmp(c, "orange") ? c = ft_strdupfree(c, ANSI_ORANGE) : 0;
+	!ft_strcmp(c, "black") ? c = ft_strdupfree(c, ANSI_BLACK) : 0;
 	c && c[0] != '\e' ? c = ft_strdupfree(c, "") : 0;
 	return (1);
 }
