@@ -1,138 +1,192 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/06 15:06:03 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/07 13:53:04 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_memset.c \
-	ft_bzero.c \
-	ft_memcpy.c \
-	ft_memccpy.c \
-	ft_memmove.c \
-	ft_memchr.c \
-	ft_memcmp.c \
-	ft_strlen.c \
-	ft_strdup.c \
-	ft_strcpy.c \
-	ft_strncpy.c \
-	ft_strcat.c \
-	ft_strncat.c \
-	ft_strlcat.c \
-	ft_strchr.c \
-	ft_strrchr.c \
-	ft_strstr.c \
-	ft_strnstr.c \
-	ft_strcmp.c \
-	ft_strncmp.c \
-	ft_atoi.c \
-	ft_isalpha.c \
-	ft_isdigit.c \
-	ft_isalnum.c \
-	ft_isascii.c \
-	ft_isprint.c \
-	ft_ispunct.c \
-	ft_isspace.c \
-	ft_toupper.c \
-	ft_tolower.c \
-	ft_memalloc.c \
-	ft_memdel.c \
-	ft_strnew.c \
-	ft_strdel.c \
-	ft_strclr.c \
-	ft_striter.c \
-	ft_striteri.c \
-	ft_strmap.c \
-	ft_strmapi.c \
-	ft_strequ.c \
-	ft_strnequ.c \
-	ft_strsub.c \
-	ft_strjoin.c \
-	ft_strtrim.c \
-	ft_strsplit.c \
-	ft_strrev.c \
-	ft_itoa.c \
-	ft_putchar.c \
-	ft_putstr.c \
-	ft_putendl.c \
-	ft_putnbr.c \
-	ft_putchar_fd.c \
-	ft_putstr_fd.c \
-	ft_putendl_fd.c \
-	ft_putnbr_fd.c \
-	ft_lstnew.c \
-	ft_lstdelone.c \
-	ft_lstdel.c \
-	ft_lstadd.c \
-	ft_lstadd_end.c \
-	ft_lstiter.c \
-	ft_lstmap.c \
-	ft_islower.c \
-	ft_isupper.c \
-	ft_strjoinfree.c \
-	ft_clamp.c \
-	get_next_line.c \
-	ft_range.c \
-	ft_straddchar.c \
-	ft_straddcharfree.c \
-	ft_error.c \
-	ft_itoa_base.c \
-	ft_uitoa_base.c \
-	ft_strtolower.c \
-	ft_strtoupper.c \
-	ft_wstrlen.c \
-	ft_strsjoin.c \
-	ft_strappend.c \
-	ft_wstrappend.c \
-	ft_wstrnew.c \
-	ft_wstrsjoin.c \
-	ft_strsjoinfree.c \
-	ft_strappendfree.c \
-	ft_wstrappendfree.c \
-	ft_wstrsjoinfree.c \
-	ft_putwchar.c \
-	ft_putwchar_fd.c \
-	ft_putwstr_fd.c \
-	ft_putwstr_fd.c \
-	ft_ustrnew.c \
-	ft_wctostr.c \
-	ft_ustrjoin.c \
-	ft_ustrjoinfree.c \
-	ft_ustrncat.c \
-	ft_wstrtostr.c \
-	ft_ustrappend.c \
-	ft_ustrsjoin.c \
-	ft_ustrappendfree.c \
-	ft_ustrsjoinfree.c \
-	ft_ustrncpy.c \
-	ft_ustrcpy.c \
-	ft_ustrdup.c \
-	ft_swap.c \
-	ft_ustrlen.c \
-	ft_strdupfree.c \
-	ft_ustrdupfree.c \
-	ft_error_exit.c \
-	ft_strcmp_percent.c \
-	ft_display_usage_exit.c \
-	ft_strscmp.c \
-	ft_charcount.c
-
 NAME = libft.a
+
+FT_MEM = ft_bzero \
+		ft_memset \
+		ft_memcpy \
+		ft_memccpy \
+		ft_memmove \
+		ft_memchr \
+		ft_memcmp \
+		ft_memalloc \
+		ft_memdel \
+		ft_swap
+
+FT_IO = get_next_line \
+		ft_putchar \
+		ft_putwchar \
+		ft_putstr \
+		ft_putendl \
+		ft_putnbr \
+		ft_putchar_fd \
+		ft_putwchar_fd \
+		ft_putstr_fd \
+		ft_putendl_fd \
+		ft_putnbr_fd \
+		ft_putwstr_fd \
+		ft_putwstr_fd \
+		ft_error \
+		ft_error_exit \
+		ft_display_usage_exit
+
+FT_STR = ft_strlen \
+		ft_strdup \
+		ft_strdupfree \
+		ft_strcpy \
+		ft_strncpy \
+		ft_strcat \
+		ft_strncat \
+		ft_strlcat \
+		ft_strchr \
+		ft_strrchr \
+		ft_strstr \
+		ft_strnstr \
+		ft_strcmp \
+		ft_strncmp \
+		ft_strnew \
+		ft_strdel \
+		ft_strclr \
+		ft_strscmp \
+		ft_strcmp_percent \
+		ft_striter \
+		ft_striteri \
+		ft_strmap \
+		ft_strmapi \
+		ft_strequ \
+		ft_strnequ \
+		ft_strrev \
+		ft_strsub \
+		ft_strtrim \
+		ft_strsplit \
+		ft_strjoin \
+		ft_strsjoin \
+		ft_strjoinfree \
+		ft_strsjoinfree \
+		ft_strappend \
+		ft_strappendfree \
+		ft_straddchar \
+		ft_straddcharfree \
+		ft_charcount
+
+FT_USTR = ft_ustrnew \
+		ft_ustrdup \
+		ft_ustrdupfree \
+		ft_ustrlen \
+		ft_ustrcpy \
+		ft_ustrncpy \
+		ft_ustrappend \
+		ft_ustrappendfree \
+		ft_ustrjoin \
+		ft_ustrjoinfree \
+		ft_ustrsjoin \
+		ft_ustrsjoinfree \
+		ft_ustrncat
+
+FT_WSTR = ft_wstrnew \
+		ft_wstrlen \
+		ft_wstrappend \
+		ft_wstrsjoin \
+		ft_wstrsjoinfree \
+		ft_wstrappendfree
+
+FT_IS = ft_isalpha \
+		ft_isdigit \
+		ft_isalnum \
+		ft_isascii \
+		ft_isprint \
+		ft_ispunct \
+		ft_isspace \
+		ft_islower \
+		ft_isupper
+
+FT_LST = ft_lstnew \
+		ft_lstdelone \
+		ft_lstdel \
+		ft_lstadd \
+		ft_lstadd_end \
+		ft_lstiter \
+		ft_lstmap
+
+FT_TO = ft_atoi \
+		ft_itoa \
+		ft_itoa_base \
+		ft_uitoa_base \
+		ft_wctostr \
+		ft_wstrtostr \
+		ft_toupper \
+		ft_tolower \
+		ft_strtolower \
+		ft_strtoupper
+
+FT_FT_PRINTF = ft_printf \
+		check_flags \
+		check_precision \
+		check_type \
+		get_address \
+		get_char \
+		get_color \
+		get_format \
+		get_int \
+		get_percent \
+		get_string \
+		get_unsigned_int \
+		init_arg \
+		init_data \
+		parse_arg \
+		parse_flags \
+		parse_length \
+		parse_precision \
+		parse_type \
+		parse_until_arg \
+		parse_width \
+		set_byte_count
+
+FT_MISC = ft_clamp \
+		ft_range
+
+SRC_DIR = src
+
+OBJ_DIR = obj
+
+EXT = .c
+
+SRC_MEM = $(addsuffix $(EXT), $(FT_MEM))
+SRC_IO = $(addsuffix $(EXT), $(FT_IO))
+SRC_STR = $(addsuffix $(EXT), $(FT_STR))
+SRC_USTR = $(addsuffix $(EXT), $(FT_USTR))
+SRC_WSTR = $(addsuffix $(EXT), $(FT_WSTR))
+SRC_IS = $(addsuffix $(EXT), $(FT_IS))
+SRC_LST = $(addsuffix $(EXT), $(FT_LST))
+SRC_TO = $(addsuffix $(EXT), $(FT_TO))
+SRC_PRINTF = $(addsuffix $(EXT), $(FT_PRINTF))
+SRC_MISC = $(addsuffix $(EXT), $(FT_MISC))
+OBJ_MEM = $(addprefix $(OBJ_DIR)/, $(SRC_MEM:.c=.o))
+OBJ_IO = $(addprefix $(OBJ_DIR)/, $(SRC_IO:.c=.o))
+OBJ_STR = $(addprefix $(OBJ_DIR)/, $(SRC_STR:.c=.o))
+OBJ_USTR = $(addprefix $(OBJ_DIR)/, $(SRC_USTR:.c=.o))
+OBJ_WSTR = $(addprefix $(OBJ_DIR)/, $(SRC_WSTR:.c=.o))
+OBJ_IS = $(addprefix $(OBJ_DIR)/, $(SRC_IS:.c=.o))
+OBJ_LST = $(addprefix $(OBJ_DIR)/, $(SRC_LST:.c=.o))
+OBJ_TO = $(addprefix $(OBJ_DIR)/, $(SRC_TO:.c=.o))
+OBJ_PRINTF = $(addprefix $(OBJ_DIR)/, $(SRC_PRINTF:.c=.o))
+OBJ_MISC = $(addprefix $(OBJ_DIR)/, $(SRC_MISC:.c=.o))
 
 HEAD = libft.h
 
 CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
-
-OBJ = $(SRC:.c=.o)
-
-ECHO = echo
 
 C_NONE = \033[0m
 C_BOLD = \033[1m
@@ -147,24 +201,60 @@ C_GRAY = \033[37m
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
-	@$(ECHO) "$(C_CYAN)Libft compilation done.$(C_NONE)"
+$(NAME): $(OBJ_MEM) $(OBJ_IO) $(OBJ_STR) $(OBJ_USTR) $(OBJ_WSTR) $(OBJ_IS) $(OBJ_LST) $(OBJ_TO) $(OBJ_PRINTF) $(OBJ_MISC) 
+	@ar rcs $(NAME) $(OBJ_MEM) $(OBJ_IO) $(OBJ_STR) $(OBJ_USTR) $(OBJ_WSTR) $(OBJ_IS) $(OBJ_LST) $(OBJ_TO) $(OBJ_PRINTF) $(OBJ_MISC)
+	@echo "$(C_CYAN)Libft compilation done.$(C_NONE)"
 
-%.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@ -I ./libft.h
+$(OBJ_DIR)/%.o : ./ft_mem/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./ft_io/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./ft_str/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./ft_ustr/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./ft_wstr/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./ft_is/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./ft_lst/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./ft_to/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./ft_printf/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./ft_misc/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
 
 clean:
-	@rm -f $(OBJ)
-	@$(ECHO) "$(C_CYAN)Libft clean done.$(C_NONE)"
+	@/bin/rm -Rf $(OBJ_DIR)
+	@echo "$(C_CYAN)Libft clean done.$(C_NONE)"
 
 fclean: clean
-	@rm -f $(NAME)
-	@$(ECHO) "$(C_CYAN)Libft fclean done.$(C_NONE)"
+	@/bin/rm -f $(NAME)
+	@echo "$(C_CYAN)Libft fclean done.$(C_NONE)"
 
 re: fclean
 	@$(MAKE) all
 
 .PHONY: clean fclean
-	@$(ECHO) "$(C_CYAN)Libft .PHONY done.$(C_NONE)"
+	@echo "$(C_CYAN)Libft .PHONY done.$(C_NONE)"

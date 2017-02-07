@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/06 15:06:27 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/07 13:57:00 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-# define BUFF_SIZE 32
+# include "ft_printf.h"
+# define BUFF_SIZE 640
 
 typedef struct	s_list
 {
