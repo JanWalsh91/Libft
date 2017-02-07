@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/07 13:53:04 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/07 14:08:10 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -135,7 +135,6 @@ FT_FT_PRINTF = ft_printf \
 		check_type \
 		get_address \
 		get_char \
-		get_color \
 		get_format \
 		get_int \
 		get_percent \

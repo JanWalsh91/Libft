@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/29 12:23:52 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/07 13:53:45 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/07 14:09:58 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 # define UC unsigned char
 # define LL long long
 
-# define RED "\e[38;5;160m"
-# define GREEN "\e[32m"
-# define BLUE "\e[38;5;20m"
-# define MAGENTA "\e[35m"
+# define ANSI_RED "\e[38;5;160m"
+# define ANSI_GREEN "\e[32m"
+# define ANSI_BLUE "\e[38;5;20m"
+# define ANSI_MAGENTA "\e[35m"
 # define CYAN "\e[38;5;51m"
 # define YELLOW "\e[38;5;226m"
 # define PINK "\e[38;5;13m"
