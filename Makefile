@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/07 14:31:15 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/08 11:33:39 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ FT_IO = get_next_line \
 		ft_putwstr_fd \
 		ft_error \
 		ft_error_exit \
-		ft_display_usage_exit
+		ft_display_usage_exit \
+		ft_errno_exit
 
 FT_STR = ft_strlen \
 		ft_strdup \

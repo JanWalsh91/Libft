@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/07 13:57:00 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/08 11:29:38 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <errno.h>
 # include "ft_printf.h"
 # define BUFF_SIZE 640
 
@@ -141,5 +142,6 @@ int				ft_strcmp_percent(char *src, char *cmp, float percent);
 void			ft_display_usage_exit(char *usage);
 int				ft_strscmp(const char *s1, const char **s);
 int				ft_charcount(char *s, char c);
+void			ft_errno_exit(void);
 
 #endif
