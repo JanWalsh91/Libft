@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:24:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/08 11:29:38 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/13 11:27:48 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,5 +143,6 @@ void			ft_display_usage_exit(char *usage);
 int				ft_strscmp(const char *s1, const char **s);
 int				ft_charcount(char *s, char c);
 void			ft_errno_exit(void);
+double			ft_atod(const char *str);
 
 #endif

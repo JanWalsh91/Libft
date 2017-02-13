@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/08 11:33:39 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/13 11:27:28 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -128,7 +128,8 @@ FT_TO = ft_atoi \
 		ft_toupper \
 		ft_tolower \
 		ft_strtolower \
-		ft_strtoupper
+		ft_strtoupper \
+		ft_atod
 
 FT_PRINTF = ft_printf \
 		check_flags \
