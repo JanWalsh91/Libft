@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/13 11:27:28 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/20 11:03:00 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ FT_MEM = ft_bzero \
 		ft_memcmp \
 		ft_memalloc \
 		ft_memdel \
-		ft_swap
+		ft_swap \
+		ft_swapd
 
 FT_IO = get_next_line \
 		ft_putchar \
