@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_clamp.c                                         :+:      :+:    :+:   */
+/*   ft_clampd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 16:37:27 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/22 14:14:47 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/22 14:13:21 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/22 14:16:32 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,8 @@
 
 #include "libft.h"
 
-int	ft_clamp(int i, int min, int max)
+double  ft_clampd(double i, double min, double max)
 {
-	if (i < min)
-		i = min;
-	if (i > max)
-		i = max;
-	return (i);
+    i < min ? i = min : 0;
+    i > max ? i = max : 0;
 }

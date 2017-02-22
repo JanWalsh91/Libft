@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/20 11:03:00 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/22 14:16:27 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -155,9 +155,8 @@ FT_PRINTF = ft_printf \
 		set_byte_count
 
 FT_MISC = ft_clamp \
+		ft_clampd \
 		ft_range
-
-SRC_DIR = src
 
 OBJ_DIR = obj
 
