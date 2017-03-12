@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/13 11:17:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/13 12:15:05 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/12 15:45:55 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ double  ft_atod(const char *str)
 			str[i] == 11 || str[i] == 12 ||
 			str[i] == 13 || str[i] == 32)
 		i++;
-    while (ft_isdigit(str[i]))
+    while (ft_isdigit(str[i]) || str[i] == '+' || str[i] == '-')
         ++i;
     if (str[i] != '.')
         return (result);
