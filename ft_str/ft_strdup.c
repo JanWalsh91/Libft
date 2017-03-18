@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 17:04:01 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/10 18:51:54 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/18 16:49:32 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(char *src)
 {
 	char	*new;
 
-	if (!(new = (char*)malloc(sizeof(char) * (ft_strlen(src) + 1))))
+	if (!(new = (char*)ft_memalloc(sizeof(char) * (ft_strlen(src) + 1))))
 		return (NULL);
 	return (ft_strcpy(new, src));
 }
