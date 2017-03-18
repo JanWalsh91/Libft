@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 17:16:41 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/02 13:12:40 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/18 15:40:54 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (!s || !c)
 		return (NULL);
-	
 	word_count = get_word_count((char*)s, c);
 	if (!(result = (char **)ft_memalloc(sizeof(char *) * (word_count + 1))))
 		return (NULL);
