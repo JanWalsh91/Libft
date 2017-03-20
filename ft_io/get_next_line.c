@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 15:57:42 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/21 15:57:27 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/20 11:13:06 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 /*
 ** Returns the next line in the file pointed to by file descriptor fd.
@@ -29,6 +29,7 @@ int			get_next_line(const int fd, char **line)
 	static t_list	*lst;
 	t_list			*new;
 
+	ft_bzero(*line, ft_strlen(*line));
 	if (!line || fd < 0 || fd == 1 || fd == 2)
 		return (-1);
 	p = lst;
