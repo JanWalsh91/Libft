@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 15:57:42 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/03/20 11:13:06 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/20 12:56:17 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int			get_next_line(const int fd, char **line)
 	static t_list	*lst;
 	t_list			*new;
 
-	ft_bzero(*line, ft_strlen(*line));
 	if (!line || fd < 0 || fd == 1 || fd == 2)
 		return (-1);
 	p = lst;
@@ -101,7 +100,7 @@ static int	read_buf(t_list *p, char **line)
 			!(*line = (char *)ft_memalloc(ft_strlen(p->content))))
 			return (0);
 		tmp = ft_memcpy(tmp, end, ft_strlen(end));
-		*line = ft_strjoinfree(*line, p->content, 'l');
+		*line = ft_strdup(p->content);
 		free(p->content);
 		p->content = tmp;
 		return (1);
