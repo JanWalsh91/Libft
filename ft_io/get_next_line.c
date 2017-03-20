@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 15:57:42 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/03/20 12:56:17 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/20 16:45:39 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,16 +62,18 @@ static int	read_file(t_list *p, char **line)
 
 	while (!ft_strchr(p->content, '\n'))
 	{
-		if ((ret = read(p->content_size, &buf, BUFF_SIZE)) == -1)
+		if ((ret = read(p->content_size, &buf, BUFF_SIZE + 1)) == -1)
 			return (-1);
 		buf[ret] = '\0';
 		if (ret != 0)
+		{
 			p->content = ft_strjoinfree(p->content, buf, 'l');
+		}
 		if (ret == 0)
 		{
 			if (*(char *)p->content)
 			{
-				p->content = ft_strjoin(p->content, "\n");
+				p->content = ft_strjoinfree(p->content, "\n", 'l');
 				return (read_buf(p, line));
 			}
 			return (0);
@@ -97,17 +99,17 @@ static int	read_buf(t_list *p, char **line)
 		*end = '\0';
 		end++;
 		if (!(tmp = ft_strnew(ft_strlen(end))) ||
-			!(*line = (char *)ft_memalloc(ft_strlen(p->content))))
+			!(*line = (char *)ft_memalloc(ft_strlen(p->content) + 1)))
 			return (0);
 		tmp = ft_memcpy(tmp, end, ft_strlen(end));
-		*line = ft_strdup(p->content);
+		*line = ft_memcpy(*line, p->content, ft_strlen(p->content) + 1);
 		free(p->content);
 		p->content = tmp;
 		return (1);
 	}
 	else if (end == NULL)
 	{
-		*line = ft_strjoinfree(*line, p->content, 'l');
+		*line = ft_strjoinfree(*line, p->content, 'b');
 		return (read_file(p, line));
 	}
 	return (read_file(p, line));
