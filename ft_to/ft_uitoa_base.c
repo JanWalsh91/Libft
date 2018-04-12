@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_uitoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/09 14:29:54 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/10 16:04:43 by jwalsh           ###   ########.fr       */
+/*   Updated: 2018/04/12 15:12:58 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft.h"
+#include "libft.h"
 
 /*
 ** Converts unsigned long integer value into an array in base base.

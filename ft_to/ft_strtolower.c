@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtolower.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/30 18:34:54 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/21 15:51:17 by jwalsh           ###   ########.fr       */
+/*   Updated: 2018/04/12 15:13:25 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft.h"
+#include "libft.h"
 
 /*
 ** Puts the uppercase chars in a char string to lowercase.
