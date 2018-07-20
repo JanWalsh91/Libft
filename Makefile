@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/22 14:16:27 by jwalsh           ###   ########.fr        #
+#    Updated: 2018/07/09 16:27:22 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -204,58 +204,58 @@ all: $(NAME)
 
 $(NAME): $(OBJ_MEM) $(OBJ_IO) $(OBJ_STR) $(OBJ_USTR) $(OBJ_WSTR) $(OBJ_IS) $(OBJ_LST) $(OBJ_TO) $(OBJ_PRINTF) $(OBJ_MISC) 
 	@ar rcs $(NAME) $(OBJ_MEM) $(OBJ_IO) $(OBJ_STR) $(OBJ_USTR) $(OBJ_WSTR) $(OBJ_IS) $(OBJ_LST) $(OBJ_TO) $(OBJ_PRINTF) $(OBJ_MISC)
-	@echo "$(C_CYAN)Libft compilation done.$(C_NONE)"
+	@echo "$(C_CYAN)Libft compiled$(C_NONE)"
 
 $(OBJ_DIR)/%.o : ./ft_mem/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 $(OBJ_DIR)/%.o : ./ft_io/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 $(OBJ_DIR)/%.o : ./ft_str/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 $(OBJ_DIR)/%.o : ./ft_ustr/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 $(OBJ_DIR)/%.o : ./ft_wstr/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 $(OBJ_DIR)/%.o : ./ft_is/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 $(OBJ_DIR)/%.o : ./ft_lst/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 $(OBJ_DIR)/%.o : ./ft_to/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 $(OBJ_DIR)/%.o : ./ft_printf/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 $(OBJ_DIR)/%.o : ./ft_misc/%.c
 	@/bin/mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<  -fvisibility=hidden
 
 clean:
 	@/bin/rm -Rf $(OBJ_DIR)
-	@echo "$(C_CYAN)Libft clean done.$(C_NONE)"
+	@echo "$(C_CYAN)Libft clean$(C_NONE)"
 
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@echo "$(C_CYAN)Libft fclean done.$(C_NONE)"
+	@echo "$(C_CYAN)Libft fclean$(C_NONE)"
 
 re: fclean
 	@$(MAKE) all
 
 .PHONY: clean fclean
-	@echo "$(C_CYAN)Libft .PHONY done.$(C_NONE)"
+	@echo "$(C_CYAN)Libft .PHONY$(C_NONE)"
